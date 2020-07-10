@@ -1,765 +1,141 @@
-@import "./color";
-@import "./typography";
+@import './color';
+@import './typography';
 
+/* Semantics */
 html,
 body {
   margin: 0;
-  color: $black-base;
-  background-color: $gray-alabaster;
-  font-family: "Open Sans", sans-serif;
-  font-size: $font-size-body;
+  color: $N300;
+  background-color: $N50;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 400;
   box-sizing: border-box;
 }
 
-strong,
-b {
-  font-weight: bold;
-  color: $black-base;
+/* Text Styles */
+strong, b {
+  font-weight: 800;
 }
 
-a {
-  text-decoration: none;
+strong {
+  color: $N500;
 }
 
-table {
-  border-spacing: 0;
-
-  &.full {
-    width: 100%;
-    min-width: 100%;
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+.thin {
   font-weight: 400;
 }
 
-small {
-  font-size: $font-size-caption;
-  color: $black-lighter;
-}
-
-ol {
-  margin: 0;
-  padding-left: 16px;
-}
-
-.ft-link {
-  color: #03ac0e;
-}
-
-.ft-linespacer {
-  height: 8px;
-  width: 100%;
-  background-color: $gray-gallery;
-}
-
-.ft-notes {
-  margin: -4px 0 16px;
+small, .small  {
   font-size: 12px;
-  color: $black-light;
 }
 
-.ft-info__container {
-  width: 100%;
-  min-width: 100%;
-  padding: 16px;
-  background-color: $gray-alabaster;
-  border-radius: 8px;
-
-  td {
-    vertical-align: top;
-  }
-
-  .ft-info__list {
-    margin: 8px 0 0;
-    font-size: $font-size-caption;
-
-    // color: $black-lighter;
-    li {
-      margin-bottom: 8px;
-    }
-
-    a {
-      color: $green-base;
-    }
-  }
-  &.ft-warning {
-    background-color: $yellow-warning;
-  }
+.tiny {
+  font-size: 10px;
 }
 
-.ft-info__icon {
-  height: 56px;
-  width: 56px;
+.green {
+  color: $G500;
 }
 
-.icon-info {
-  background-image: url("https://ecs7.tokopedia.net/assets-fintech-email/img/asuransi/icon-info.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  float: left;
-  width: 32px;
-  height: 32px;
-  margin-top: -4px;
-  margin-right: 8px;
-
-  &__small {
-    width: 28px;
-    height: 28px;
-    margin-top: 0;
-  }
+.transaction {
+  color: $Y500;
 }
 
-.ft-info__title {
+/* Elements */
+a {
+  color: $G500;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+h1,h2,h3,h4 {
   margin: 0;
-  padding-left: 16px;
-  font-size: $font-size-subheader;
+  margin-bottom: 16px;
+  font-weight: 800;
+  color: $N500;
 }
 
-.ft-ticker {
-  padding: 8px 16px;
-  margin: 0;
-  color: $black-light;
-  font-size: 13px;
-  border-radius: 4px;
-  background-color: #fffbcd;
-  border: solid 1px #ecdb77;
+h1 {
+  font-size: 20px;
+  line-height: 26px;
 }
 
-/* Header */
-.ft-product__logo {
-  height: 35px;
+h2 {
+  font-size: 18px;
+  line-height: 24px;
 }
 
-/* end of Header */
-
-/* Intro */
-.ft-intro {
-  &__title {
-    margin: 0 0 16px;
-    font-size: 20px;
-  }
-
-  &__content {
-    padding: 24px;
-    border: 1px solid $gray-alto;
-    border-radius: 8px;
-    background-color: $white-base;
-    text-align: center;
-
-    p {
-      margin: 16px 0 0;
-      font-size: $font-size-subheader;
-    }
-  }
-
-  &__box {
-    border-radius: 8px;
-    background-color: rgba(246, 246, 246, 0.5);
-    padding: 16px;
-    text-align: left;
-    margin-top: 16px;
-
-    .label {
-      &--small {
-        font-size: 12px;
-        color: $black-lighter;
-        margin-top: 0;
-        margin-bottom: 8px;
-      }
-
-      &--normal {
-        font-size: 14px;
-        color: $black-base;
-        margin-top: 0;
-      }
-    }
-  }
-}
-
-/* end of Intro */
-
-.ft-body {
-  &__container {
-    width: 640px;
-    margin: 40px auto 24px;
-    background-color: $white-base;
-    border: 1px solid $gray-alto;
-  }
-}
-
-.ft-card {
-  p {
-    margin: 0 0 16px;
-    font-size: 20px;
-  }
-
-  &__content {
-    border: 1px solid $gray-alto;
-    border-radius: 8px;
-
-    &.content__link {
-      padding: 12px;
-      text-align: left;
-      font-size: 12px;
-      color: $black-light;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-
-      img {
-        margin-right: 8px;
-      }
-    }
-
-    .card-content__header {
-      padding: 8px;
-
-      p {
-        margin: 8px 0;
-        font-size: $font-size-body;
-        font-weight: bold;
-      }
-    }
-
-    .card-content__body {
-      padding: 16px;
-      border-top: 1px solid $gray-alto;
-      border-bottom: 1px solid $gray-alto;
-
-      p {
-        margin: 0;
-
-        &:nth-child(odd) {
-          display: block;
-          font-size: $font-size-caption;
-          color: $black-lighter;
-        }
-
-        &:nth-child(even) {
-          margin-bottom: 16px;
-          font-size: $font-size-body;
-          font-weight: bold;
-        }
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-
-    .card-content__footer {
-      padding: 8px;
-
-      a {
-        font-size: $font-size-caption;
-        color: $green-apple;
-      }
-    }
-  }
-}
-
-.ft-table {
-  &__report {
-    p {
-      margin: 0 0 16px;
-      font-size: 20px;
-    }
-
-    &-content {
-      width: 100%;
-      min-width: 100%;
-
-      tr > td {
-        padding: 16px;
-        border-bottom: 1px solid $gray-alto;
-      }
-
-      tr > td.header {
-        font-size: 12px;
-        color: $black-light;
-        background-color: $gray-alabaster;
-        border-bottom: 0;
-      }
-
-      tr > td.body {
-        font-size: 12px;
-      }
-
-      tr > td.footer {
-        font-size: 12px;
-        border-top: 0.5px solid #d8d8d8;
-        border-bottom: 1.5px solid #d8d8d8;
-      }
-    }
-  }
-
-  &__summary {
-    p {
-      margin: 0 0 16px;
-      font-size: 20px;
-    }
-
-    &-content {
-      width: 100%;
-      min-width: 100%;
-
-      tr > {
-        td,
-        th {
-          padding: 8px 0;
-          border-bottom: 1px solid $gray-alto;
-        }
-      }
-
-      tr:first-child > td {
-        border-bottom: 1px solid $gray-alto;
-      }
-
-      tr:last-child > td {
-        border-bottom: none;
-      }
-    }
-
-    .column__payment {
-      img {
-        display: inline-block;
-        margin-right: 4px;
-        vertical-align: middle;
-      }
-
-      span {
-        font-size: $font-size-caption;
-        color: $black-lighter;
-      }
-    }
-  }
-
-  &__eg-report {
-    .title {
-      font-size: 20px;
-      font-weight: bold;
-      color: $black-base;
-    }
-
-    &-content {
-      width: 100%;
-      min-width: 100%;
-
-      tr > td {
-        padding: 12px 0;
-        vertical-align: top;
-      }
-
-      tr:nth-child(2) > td {
-        border-bottom: 1px solid $gray-alto;
-        padding-bottom: 24px;
-      }
-
-      tr:last-child > td {
-        padding-top: 24px;
-        padding-bottom: 0;
-      }
-    }
-  }
-
-  &__eg-timeline {
-    .title {
-      font-size: 20px;
-      font-weight: bold;
-      color: $black-base;
-    }
-
-    .box {
-      &-top {
-        border-top-right-radius: 8px;
-        border-top-left-radius: 8px;
-        padding: 8px 8px 0;
-        margin-top: 0px;
-        height: 20px;
-        background-color: #f3f4f5;
-
-        &.active {
-          background-color: #d6ffde;
-        }
-      }
-
-      &-bottom {
-        border-bottom-right-radius: 8px;
-        border-bottom-left-radius: 8px;
-        padding: 0 8px 8px;
-        margin-top: -4px;
-        height: 18px;
-        background-color: #f3f4f5;
-
-        &.active {
-          background-color: #d6ffde;
-        }
-      }
-
-      text-align: center;
-      width: 100px;
-    }
-
-    tr:first-child > td {
-      border-bottom: 1px solid #f3f4f5;
-    }
-
-    &-content {
-      width: 100%;
-      min-width: 100%;
-    }
-  }
-
-  &__gc-multiple {
-    .title {
-      margin: 0 0 16px;
-      font-size: 20px;
-    }
-
-    &-content {
-      width: 100%;
-      min-width: 100%;
-      padding: 16px;
-      border: 1px solid $gray-alto;
-      border-radius: 8px;
-
-      .contact {
-        font-size: 10px;
-        color: $black-lighter;
-        margin: 0;
-      }
-
-      tr > {
-        td,
-        th {
-          padding: 8px 0;
-          border-bottom: 1px solid $gray-alto;
-        }
-      }
-
-      tr:first-child > td {
-        border-bottom: 1px solid $gray-alto !important;
-      }
-
-      tr:last-child > td {
-        border-bottom: none;
-      }
-    }
-
-    &-box {
-      border-radius: 8px;
-      background-color: #fbfbfb;
-      padding: 16px;
-    }
-  }
-
-  &__box {
-    border-radius: 8px;
-    background-color: #f1f1f1;
-    padding: 8px 24px 16px;
-
-    .label {
-      font-size: 12px;
-      font-weight: bold;
-      color: $black-base;
-
-      &--small {
-        font-size: 10px;
-        font-weight: normal;
-        color: $black-lighter;
-      }
-    }
-  }
-}
-
-.ft-banner__container {
-  display: block;
-}
-
-.ft-partner {
-  &__caption {
-    font-size: 11px;
-    color: $black-lighter;
-  }
-
-  &__logo {
-    height: 16px;
-    width: auto;
-    vertical-align: middle;
-  }
-}
-
-.ft-contact {
-  margin: 0;
-  font-size: $font-size-caption;
-  color: $black-light;
-}
-
-/* Footer */
-.ft-footer {
-  &__reminder {
-    margin: 0 0 24px;
-    padding-top: 16px;
-    font-size: $font-size-caption;
-    color: $black-lighter;
-    border-top: 1px solid $gray-alto;
-  }
-
-  &__product {
-    display: block;
-    padding: 16px;
-    color: $black-light;
-    border: 1px solid $gray-alto;
-    border-radius: 4px;
-    text-align: center;
-    box-sizing: border-box;
-
-    .title {
-      font-size: $font-size-caption;
-      color: $black-light;
-      text-align: center;
-
-      &--primary {
-        margin: 16px 0 0;
-      }
-
-      &--secondary {
-        margin: 0;
-        font-weight: bold;
-      }
-    }
-
-    .desc {
-      margin: 8px 0 0;
-      font-size: 10px;
-      color: $black-lighter;
-      text-align: center;
-    }
-  }
-
-  &__follow {
-    &-title {
-      margin: 0 0 8px;
-      font-size: $font-size-caption;
-      color: $black-light;
-    }
-
-    &-dev {
-      a {
-        display: block;
-        margin-right: 4px;
-      }
-    }
-
-    &-socmed {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-
-      li {
-        display: inline-block;
-        margin: 0 2px;
-
-        &:first-child {
-          margin-left: 0;
-        }
-
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-    }
-  }
-
-  &__contact {
-    font-size: $font-size-caption;
-    color: $black-lighter;
-    border-top: 1px solid $gray-alto;
-    background-color: $gray-alabaster;
-    text-align: center;
-
-    a {
-      color: $green-apple;
-    }
-  }
-}
-/* End of Footer */
-
-/* Onboarding Styles */
-.section__onboarding--wrapper {
-  padding: 16px;
+h4 {
   font-size: 14px;
-  max-width: 640px;
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  .onboarding__label {
-    margin: 0;
-    font-size: $font-size-caption;
-    color: $black-lighter;
-    text-align: center;
-  }
-
-  .onboarding__title {
-    margin: 8px 0 24px;
-    font-size: 56px;
-    line-height: 0.85;
-    text-align: center;
-
-    span {
-      font-size: 56px;
-      color: $green-base;
-    }
-  }
-
-  .onboarding__desc {
-    margin: 0;
-    font-size: $font-size-subheader;
-    text-align: center;
-  }
-
-  .onboarding__steps {
-    position: relative;
-    padding: 24px 24px 40px;
-    margin: 24px 0 40px;
-    max-height: 275px;
-    overflow-y: scroll;
-    background-color: $white-base;
-    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12);
-    border-radius: 8px;
-    list-style-position: inside;
-    box-sizing: border-box;
-
-    &::after {
-      content: "";
-      display: block;
-      height: 50px;
-      width: calc(100% - 48px);
-      position: fixed;
-      left: 24px;
-      bottom: 75px;
-      background-image: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0),
-        #ffffff
-      );
-    }
-  }
-
-  .onboarding__thanks {
-    margin: 0;
-    font-size: $font-size-body;
-    color: $black-lighter;
-    text-align: center;
-  }
-
-  pre {
-    margin: 16px 0 24px;
-    padding: 16px;
-    font-size: 12px;
-    background-color: rgba(0, 0, 0, 0.05);
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.07);
-  }
+  line-height: 20px;
 }
-/* end of Onboarding Styles */
 
-.ft-mcl {
-  &__loan {
-    margin-top: 8px;
+p {
+  margin: 0;
+  margin-bottom: 8px;
+}
 
-    td {
-      border-bottom: none !important;
-    }
+
+td {
+  padding: 0;
+}
+
+/* Layout */
+img.logo {
+  width: 144px;
+}
+
+table.body {
+  width: 600px;
+  margin: 40px auto 24px;
+  background-color: $N0;
+  border: 1px solid $N100;
+  border-spacing: 0;
+  
+  td.section {
+    padding: 16px 32px;
+  }
+
+  ol,ul {
+    padding-left: 20px;
   }
 }
 
-.ft-product__intro {
+.gray-box {
   padding: 16px;
-  border: 1px solid $gray-alto;
-  border-radius: 4px;
-
-  &--mutualfund {
-    border-radius: 8px;
-    padding: 12px 8px;
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  .text--wrapper {
-    padding-left: 16px;
-  }
-
-  .title {
-    margin: 0;
-    font-size: 12px;
-  }
-
-  .desc {
-    margin: 0;
-    color: $black-lighter;
-    font-size: 12px;
+  border-radius: 12px;
+  background-color: $N50;
+  td {
+    padding: 8px;
   }
 }
 
-.ft-referral--wrapper {
-  padding: 16px;
-  font-size: 11px;
-  border-radius: 4px;
-  border: 1px solid $gray-alto;
-  background-image: url("https://ecs7.tokopedia.net/assets-fintech-email/img/asuransi/bg-section-referral-new.png");
-  background-size: cover;
-  background-position: left center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-
-.ft-referral-info--wrapper {
-  padding: 24px 16px;
-  border-radius: 4px;
-  border: 1px solid $gray-alto;
-  background-image: url("https://ecs7.tokopedia.net/assets-fintech-email/img/asuransi/bg-referral-info-new.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-
-  .title {
-    margin: 0;
-    font-size: 16px;
-  }
-
-  .desc {
-    margin: 8px 0 16px;
-    color: $black-light;
-    font-size: 12px;
-  }
-}
-
-// modal-toko
-.step {
-  &-img {
-    height: 230px;
-    img {
-      max-width: 100%;
+.footer {
+  .product {
+    width: 180px;
+    text-align: center;
+    h4 {
+      color: $N500
     }
-  }
-  &-caption {
-    text-align: left;
-    font-size: 12px;
-    padding: 0 16px;
+    small {
+      font-weight: 400;
+      color: $N300;
+    }
+    .icon,.desc {
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid $N100;
+    }
+    .desc {
+      margin-top: -32px;
+      padding-top: 48px;
+      padding-bottom: 24px;
+    }
+    .icon {
+      background-color: $N0;
+      display: inline-block;
+    }
   }
 }

@@ -1,0 +1,50 @@
+---
+title: Tokopedia Emas - Miliki emas batangan dengan cara menyicil
+userName: Pengguna Ujicoba
+iconUrl: 'https://via.placeholder.com/288x192'
+introTitle: Pengajuan Cicilan Emas sedang diproses
+introText: >
+  Terima kasih telah mengajuan Cicilan Emas melalui Tokopedia. 
+  Formulir pengajuanmu kini sedang diproses oleh Dhanapala selaku mitra kami. 
+  Estimasi hasil pengajuan keluar maks. <b>10 Jan 2020 14:30 WIB</b>
+iconWidth: 288px
+applicationSummary: 
+- label: ID Pengajuan
+  value: <span class="green">CC4512001</span>
+- label: Jumlah Emas
+  value: 2 gram
+- label: Jenis Kepingan
+  value: Antam
+- label: Durasi Cicilan
+  value: 6 Bulan
+- label: Total Tagihan
+  value: Rp1.200.000
+- label: Tagihan Per Bulan (6x)
+  value: <span class="transaction">Rp200.000</span>
+---
+
+<table class="body">
+  {{> intro}}
+  <tr>
+    <td class="section align-center">
+      <a class="btn main">Lihat Status Pengajuan</a>
+    </td>
+  </tr> 
+  <tr>
+    <td class="section">
+      <h2>Ringkasan pengajuan</h2>
+      <div class="gray-box">
+        <table class="full-width">
+          {{#each applicationSummary}}
+          <tr>
+            <td width="150px" class="align-left">{{this.label}}</td>
+            <td>:</td>
+            <td class="align-right"><strong>{{{this.value}}}</strong></td>
+          </tr>
+          {{/each}}
+        </table>
+      </div>
+    </td>
+  </tr>
+  {{> footer type="investment-gold"}}
+</table>

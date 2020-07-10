@@ -1,63 +1,95 @@
-@import "./color";
+@import './color';
 
 /* Helper */
-.padding {
-  &-xy16 {
-    padding: 16px;
-  }
 
-  &-x16 {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+.m {
+  @for $i from 0 through 8 {
+    &#{$i} {
+      margin: $i * 4px;
+    }
 
-  &-t8 {
-    padding-top: 8px;
-  }
+    &r#{$i} {
+      margin-right: $i * 4px;
+    }
 
-  &-t16 {
-    padding-top: 16px;
-  }
+    &l#{$i} {
+      margin-left: $i * 4px;
+    }
 
-  &-t24 {
-    padding-top: 24px;
-  }
+    &b#{$i} {
+      margin-bottom: $i * 4px;
+    }
 
-  &-b8 {
-    padding-bottom: 8px;
-  }
+    &t#{$i} {
+      margin-top: $i * 4px;
+    }
 
-  &-b16 {
-    padding-bottom: 16px;
-  }
+    &x#{$i} {
+      margin-left: $i * 4px;
+      margin-right: $i * 4px;
+    }
 
-  &-b24 {
-    padding-bottom: 24px;
+    &y#{$i} {
+      margin-top: $i * 4px;
+      margin-bottom: $i * 4px;
+    }
   }
+}
+.p {
+  @for $i from 0 through 8 {
+    &#{$i} {
+      padding: $i * 4px !important;
+    }
 
-  &-y8 {
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
+    &r#{$i} {
+      padding-right: $i * 4px !important;
+    }
 
-  &-y16 {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
+    &l#{$i} {
+      padding-left: $i * 4px !important;
+    }
 
-  &-xy24 {
-    padding: 24px;
-  }
+    &b#{$i} {
+      padding-bottom: $i * 4px !important;
+    }
 
-  &-x24 {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
+    &t#{$i} {
+      padding-top: $i * 4px !important;
+    }
 
-  &-y24 {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    &x#{$i} {
+      padding-left: $i * 4px !important;
+      padding-right: $i * 4px !important;
+    }
+
+    &y#{$i} {
+      padding-top: $i * 4px !important;
+      padding-bottom: $i * 4px !important;
+    }
   }
+}
+
+.background {
+  &-blue {
+    background-color: #009bff;
+  }
+  &-white {
+    background-color: white;
+  }
+}
+
+//Various
+.align {
+  &-right {
+    text-align: right;
+  }
+  &-center {
+    text-align: center;
+  }
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .borderless {
@@ -71,6 +103,14 @@
 .bordered {
   border-radius: 4px;
   border: 1px solid $gray-alto;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.large {
+  font-size: 18px;
 }
 
 .w {
@@ -94,16 +134,6 @@
   }
 }
 
-.u-clearfix::before,
-.u-clearfix::after {
-  content: " ";
-  display: table;
-}
-
-.u-clearfix::after {
-  clear: both;
-}
-
-.ft-bold {
-  font-weight: bold;
+small {
+  font-size: 12px;
 }

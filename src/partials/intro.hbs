@@ -1,0 +1,27 @@
+<tr>
+  <td class="section pt8">
+    <a target="_blank" href="https://www.tokopedia.com/">
+      <img class="logo" src="https://ecs7.tokopedia.net/assets-fintech-email/img/logo/logo-tokopedia.png"
+        alt="Logo Tokopedia" />
+    </a>
+  </td>
+</tr>
+
+<tr>
+  <td class="align-center">
+    {{#if iconWidth}}
+    <img width="{{iconWidth}}" src="{{iconUrl}}" alt="{{iconAlt}}" style="margin: 48px auto" />
+    {{else}}
+    <img width="100%" src="{{iconUrl}}" alt="{{iconAlt}}" />
+    {{/if}}
+  </td>
+</tr>
+<tr>
+  <td class="section">
+    <p>Hai <strong>{{ userName }}</strong>,</p>
+    <h1><strong>{{ introTitle }}</b></strong></h1>
+    {{#if introText}}
+    <p>{{{introText}}}</p>
+    {{/if}}
+  </td>
+</tr>
