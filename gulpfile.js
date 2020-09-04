@@ -6,10 +6,10 @@ const sass = require("gulp-sass");
 const cleanCss = require("gulp-clean-css");
 const inlineCss = require("gulp-inline-css");
 const extReplace = require('gulp-ext-replace');
+const prettify = require('gulp-html-prettify');
 
 const browserSync = require("browser-sync").create();
 const panini = require("panini");
-const inky = require("inky");
 
 const paniniOptions = {
   root: "src/pages/",
@@ -28,11 +28,12 @@ const browserSyncOptions = {
 };
 
 const htmlMinOptions = {
-  removeComments: true
+  removeComments: true,
+  collapseWhitespace: true
 };
 
 const inlineCssOptions = {
-removeHtmlSelectors: true
+  removeHtmlSelectors: true
 };
 
 const htmlPath = 'src/{layouts,partials,helpers,data,pages}/**/*';
@@ -41,7 +42,6 @@ const pagesPath = "src/pages/**/*.{hbs,html}";
 const paniniTask =   () => gulp
   .src(pagesPath)
   .pipe(panini(paniniOptions))
-  .pipe(inky())
   .pipe(extReplace('.html')) 
   .pipe(gulp.dest("dist/"))
 ;
@@ -60,9 +60,10 @@ gulp.task("panini", paniniTask);
 /* Clean and minify HTML, also embed inline CSS on tags */
 gulp.task("htmlMin",  () => gulp
     .src("dist/**/*.html")
-    .pipe(htmlMin(htmlMinOptions))
     .pipe(inlineCss(inlineCssOptions))
-    .pipe(gulp.dest("dist/"))
+    .pipe(htmlMin(htmlMinOptions))
+    .pipe(prettify({indent_char: ' ', indent_size: 2}))
+    .pipe(gulp.dest("dist-compiled/"))
 );
 
 /* Static Server */
@@ -75,8 +76,6 @@ gulp.task("watch", () => {
     paniniTask();
     browserSync.reload();
   });
-
-  //gulp.watch(htmlPath).on("change", browserSync.reload);
 
   gulp.watch("src/scss/*.scss", gulp.parallel("sass"));
   gulp.watch("src/scss/*.scss").on("change", browserSync.reload);

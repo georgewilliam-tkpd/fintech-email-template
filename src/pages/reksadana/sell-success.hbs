@@ -1,0 +1,65 @@
+---
+title: Monthly Report
+userName: "{{.name}}"
+introTitle: Penjualan reksa dana kamu berhasil
+introText: > 
+  Dana penjualan reksa dana telah masuk ke Saldo Tokopedia kamu. Cek ringkasan hasil penjualanmu di bawah.
+sellSummary: 
+- label: Nominal Penjualan
+  value: "{{.amount}}"
+- label: Produk
+  value: "{{if eq .product_id 2.00}} Syariah Mandiri {{else}} Syailendra Pasar Uang {{end}}"
+- label: Order ID
+  value: "{{.order_id}}"
+- label: Waktu Transaksi
+  value: "{{.txn_time}}"
+- label: Tujuan Penjualan
+  value: '{{.payment_method}}<br/><small class="thin">{{.saldo_email}}</small>'
+---
+<!-- 
+
+{
+  "template": "mutualfund_sell_saldo_success",
+  "target": [
+    {
+      "email": "nararya.anugraha@tokopedia.com",
+      "phone_number": "",
+      "user_id": 0
+    }
+  ],
+  "params": {
+    "amount": "Rp1.234.567",
+    "name": "Pengguna Ujicoba",
+    "order_id": "ABCD/1234",
+    "payment_method": "Saldo Tokopedia",
+    "product_id": 1,
+    "saldo_email": "email@email.email",
+    "txn_time": "24 Augustus 2020, 11.30 WIB"
+  },
+  "attachments": [],
+  "pretend": false,
+  "is_test": true,
+  "push_notification_images": [],
+  "notification_types": []
+}
+
+-->
+<table class="body" align="center">
+  {{> intro}}
+  <tr>
+    <td class="section">
+      <h2>Ringkasan penjualan</h2>
+      <table class="full-width gray-box">
+        {{#each sellSummary}}
+        <tr>
+          <td width="200px" class="align-left">{{this.label}}</td>
+          <td class="align-right"><strong>{{{this.value}}}</strong></td>
+        </tr>
+        {{/each}}
+      </table>
+      <p class="my4">Kamu juga bisa menarik dana dari Saldo Tokopedia ke rekening pribadi.</p>
+      <a href="\{{.move_toko_link}}" class="btn main block">Cek Saldo Tokopedia</a>
+    </td>
+  </tr>
+  {{> footer}}
+</table>

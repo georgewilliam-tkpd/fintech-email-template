@@ -34,19 +34,19 @@ page[size="A4"][layout="landscape"] {
     .label {
       &--small {
         font-size: 9px;
-        color: $black-light;
+        color: $N400;
         margin: 2px 0;
       }
 
       &--medium {
         font-size: 10px;
-        color: $black-light;
+        color: $N400;
         margin-bottom: 16px;
       }
 
       &--large {
         font-size: 14px;
-        color: $black-light;
+        color: $N400;
         margin-bottom: 16px;
       }
 
@@ -60,18 +60,18 @@ page[size="A4"][layout="landscape"] {
       &--code {
         font-size: 18px;
         font-weight: bold;
-        color: $black-base;
+        color: $N600;
         margin: 0;
       }
 
       &--info {
         font-size: 10px;
-        color: $black-lighter;
+        color: $N200;
       }
     }
 
     .line-spacer {
-      border: 1px solid $gray-alto;
+      border: 1px solid $N100;
       margin: 8px 0;
 
       &--partial {
@@ -279,9 +279,9 @@ page[size="A4"][layout="landscape"] {
   }
   &__box {
     margin-top: 16px;
-    border: 1px solid $gray-alto;
+    border: 1px solid $N100;
     border-radius: 12px;
-    color: $black-lighter;
+    color: $N200;
     font-size: 9px;
 
     .list-unordered {
@@ -332,7 +332,7 @@ page[size="A4"][layout="landscape"] {
 
       .info {
         font-size: 12px;
-        color: $black-light;
+        color: $N400;
         margin-top: 0;
         margin-bottom: 48px;
       }
@@ -363,7 +363,7 @@ page[size="A4"][layout="landscape"] {
 
         &-value {
           padding-left: 16px;
-          color: $black-base;
+          color: $N600;
           float: right;
         }
       }
@@ -392,7 +392,7 @@ page[size="A4"][layout="landscape"] {
 
         .summary-label {
           font-size: 14px;
-          color: $black-light;
+          color: $N400;
           margin: 0;
 
           &.bold {
@@ -400,7 +400,7 @@ page[size="A4"][layout="landscape"] {
           }
 
           &.green {
-            color: $green-base;
+            color: $G400;
           }
         }
 
@@ -413,7 +413,7 @@ page[size="A4"][layout="landscape"] {
 
         .summary-desc {
           font-size: 16px;
-          color: $black-light;
+          color: $N400;
           margin: 0;
         }
       }
@@ -426,11 +426,11 @@ page[size="A4"][layout="landscape"] {
           margin: 0;
 
           &--main {
-            color: $black-light;
+            color: $N400;
           }
 
           &--desc {
-            color: $black-lighter;
+            color: $N200;
           }
 
           &--in {

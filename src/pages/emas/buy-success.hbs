@@ -1,0 +1,64 @@
+---
+title: Tokopedia Emas - Pembelian Berhasil
+userName: "{{.name}}"
+introTitle: Pembelian Emas Berhasil
+introText: Emas kamu akan masuk pada <b>{{.time}}</b>
+buySummary: 
+- label: Nominal Pembelian
+  value: "{{.price}}"
+- label: Jumlah Emas
+  value: "{{.weight}} gram"
+- label: Harga Beli Emas/gram saat Transaksi
+  value: "{{.price_per_gram}}"
+- label: Nomor Transaksi
+  value: "{{.transaction_number}}"
+- label: Waktu Transaksi
+  value: "{{.time}}"
+- label: Metode Pembayaran
+  value: "{{.payment_method}}"
+---
+<!-- {
+  "template": "e-gold_gold_buy_success",
+  "target": [
+    {
+      "email": "nararya.anugraha@tokopedia.com",
+      "phone_number": "",
+      "user_id": 0
+    }
+  ],
+  "params": {
+    "name": "Pengguna Ujicoba",
+    "time": "1 Januari, 2020",
+    "price": "Rp100.000",
+    "weight": "0,1",
+    "price_per_gram": "Rp1.000.000",
+    "transaction_number": "INVOICE/INVOICE"
+    "payment_method": "OVO"
+  },
+  "attachments": [],
+  "pretend": false,
+  "is_test": true,
+  "push_notification_images": [],
+  "notification_types": []
+} -->
+<table class="body" align="center">
+  {{> intro}}
+  <tr>
+    <td class="section">
+      <h2>Ringkasan Pembelian</h2>
+       <div class="gray-box">
+        <table class="full-width">
+          {{#each buySummary}}
+          <tr>
+            <td width="200px" class="align-left">{{this.label}}</td>
+            <td>:</td>
+            <td class="align-right"><strong>{{{this.value}}}</strong></td>
+          </tr>
+          {{/each}}
+        </table>
+      </div>
+    </td>
+  </tr>
+
+  {{> footer type="gold"}}
+</table>

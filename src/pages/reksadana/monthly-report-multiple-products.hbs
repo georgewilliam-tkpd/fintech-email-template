@@ -1,0 +1,86 @@
+---
+title: Monthly Report
+userName: "{{.name}}"
+introTitle: Laporan bulanan reksa dana telah terbit
+introText: > 
+  Berikut ringkasan investasi Reksa Dana mu untuk periode <strong>{{.period}}</strong>.
+  Kamu bisa pantau detail investasimu dengan download laporan dibawah ini.
+---
+<!--
+{
+  "template": "mutualfund_monthly_report",
+  "target": [
+    {
+      "email": "nararya.anugraha@tokopedia.com",
+      "phone_number": "",
+      "user_id": 0
+    }
+  ],
+  "params": {
+    "name": "Pengguna Ujicoba", 
+    "period": "Juli 2020",
+    "totalinvest": "Rp.2.400.000",
+    "totalprofit": "Rp190.000",
+    "productlist": [
+      {
+        "productname" : "Produk Satu",
+        "balance": "Rp1.000.000",
+        "unit":100,
+        "profit":"Rp100.000"
+      },
+      {
+        "productname" : "Produk Dua",
+        "balance": "Rp1.440.000",
+        "unit":80,
+        "profit":"Rp90.000"
+      }
+    ]
+  },
+  "attachments": [],
+  "pretend": false,
+  "is_test": true,
+  "push_notification_images": [],
+  "notification_types": []
+}
+-->
+<table class="body" align="center">
+  {{> intro}}
+  <tr>
+    <td class="section">
+      <h2>Ringkasan Investasi</h2>
+      <table class="gray-box" width="100%">
+        \{{ range $i, $e := .productlist }}  
+        <tr>
+          <td class="large" colspan="2"><b>\{{ $e.productname }}</b></td>
+        </tr>
+        <tr>
+          <td width="50%">
+            <p><small>Jumlah Investasi</small></p>
+            <p><b>\{{ $e.balance }}</b>(\{{ $e.unit }} unit)</p>
+          </td>
+          <td width="50%">
+            <p><small>Total Keuntungan Sejak Awal</small></p>
+            <p><b>\{{ $e.profit }}</b></p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"><hr/></td>
+        </tr>
+        \{{ end }}
+        <tr>
+          <td>
+            <p><small>Total Investasi</small></p>
+            <p class="color-y500"><b>\{{ .totalinvest }}</b></p>
+          </td>
+          <td>
+            <p><small>Total Keuntungan</small></p>
+            <p class="color-y500"><b>\{{ .totalprofit }}</b></p>
+          </td>
+        </tr>
+      </table>
+      <p class="my4">Pantau juga tren harga reksa dana atau tambah investasimu dengan cek dashboard.</p>
+      <a href="https://www.tokopedia.com/reksa-dana/dashboard" class="btn main block">Cek Dashboard Sekarang</a>
+    </td>
+  </tr>
+  {{> footer}}
+</table>

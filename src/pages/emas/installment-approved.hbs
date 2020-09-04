@@ -1,14 +1,14 @@
 ---
 title: Tokopedia Emas - Miliki emas batangan dengan cara menyicil
 userName: Pengguna Ujicoba
-iconUrl: 'https://via.placeholder.com/288*192'
+iconUrl: 'https://ecs7.tokopedia.net/fintech/gold/installment/illustration-approved.png'
 introTitle: Selamat, pengajuan Cicilan Emas kamu disetujui
 introText: >
   Yay, pengajuan cicilanmu telah disetujui. 
   Cek dashboard Cicilan Emas untuk melihat tagihan cicilan setiap bulannya. 
   Emas batangan akan dikirim setelah seluruh tagihan lunas. 
   Pastikan membayar tepat waktu untuk mengindari denda keterlambatan.
-iconWidth: 288px
+iconWidth: 360px
 applicationSummary: 
 - label: ID Pengajuan
   value: <span class="green">CC4512001</span>
@@ -21,31 +21,16 @@ applicationSummary:
 - label: Total Tagihan
   value: Rp1.200.000
 - label: Tagihan Per Bulan (6x)
-  value: <span class="transaction">Rp200.000</span>
+  value: Rp200.000
 ---
 
 <table class="body">
   {{> intro}}
   <tr>
     <td class="section align-center">
-      <a class="btn main">Ajukan Ulang</a>
+      <a class="btn main" href="https://www.tokopedia.com/emas/cicil">Ke Dashboard Cicilan Emas</a>
     </td>
   </tr> 
-  <tr>
-    <td class="section">
-      <h2>Ke Dashboard Cicilan Emas</h2>
-      <div class="gray-box">
-        <table class="full-width">
-          {{#each applicationSummary}}
-          <tr>
-            <td width="150px" class="align-left">{{this.label}}</td>
-            <td>:</td>
-            <td class="align-right"><strong>{{{this.value}}}</strong></td>
-          </tr>
-          {{/each}}
-        </table>
-      </div>
-    </td>
-  </tr>
+  {{> gold-installment-details }}
   {{> footer type="investment-gold"}}
 </table>

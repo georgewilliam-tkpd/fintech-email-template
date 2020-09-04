@@ -1,0 +1,49 @@
+---
+title: Tokopedia Emas - Jumlah Emas Anda Mendekati Batas Kepemilikan
+userName: "{{.name}}"
+introTitle: Jumlah emas Anda mendekati batas kepemilikan
+introText: > 
+  Nilai emas di tabungan Anda akan mendekati batas 10 gram untuk level Gold Prime. 
+  Cukup isi <b>identitas diri</b> untuk meningkatkan level ke Gold Prestive dan nikmati berbagai keuntungan di level baru.
+---
+<!-- 
+{
+  "template": "e-gold_limit_value_prestive",
+  "target": [
+    {
+      "email": "nararya.anugraha@tokopedia.com",
+      "phone_number": "",
+      "user_id": 0
+    }
+  ],
+  "params": {
+    "name": "Pengguna Ujicoba"
+  },
+  "attachments": [],
+  "pretend": false,
+  "is_test": true,
+  "push_notification_images": [],
+  "notification_types": []
+}
+
+-->
+<table class="body" align="center">
+  {{> intro}}
+  <!-- Table -->
+  <tr>
+    <td class="section">
+      <table cellpadding="0" cellspacing="0" width="100%" class="borderless">
+        <tr>
+          <td>
+            <a href="https://www.tokopedia.com/emas/" class="btn main ghost block">Cek Tokopedia Emas</a>
+          </td>
+          <td width="2%"></td>
+          <td>
+            <a href="https://www.tokopedia.com/emas/membership/level/?type=details" class="btn main block">Tingkatkan ke Gold Prestive</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  {{> footer}}
+</table>

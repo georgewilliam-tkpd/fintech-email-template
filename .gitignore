@@ -1,4 +1,5 @@
 dist
+dist-compiled
 node_modules
 .prettierrc
 package-lock.json

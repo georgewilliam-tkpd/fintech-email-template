@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" style="background-color: #f8f8f8; box-sizing: border-box; color: rgba(0,0,0,.7); font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 400; margin: 0;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tokopedia Emas - Laporan Bulanan | Tokopedia</title>
+</head>
+
+<body style="background-color: #f8f8f8; box-sizing: border-box; color: rgba(0,0,0,.7); font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 400; margin: 0;">
+    <table border="0" cellpadding="0" cellspacing="0" align="center" style="background-color: #fff; border: 1px solid #e0e0e0; border-spacing: 0; margin: 40px auto 24px; width: 640px;">
+        <tr>
+            <td style="padding: 24px;">
+                <table border="0" cellpadding="0" cellspacing="0" style="border-spacing: 0;">
+                    <tr>
+                        <td>
+                            <a target="_blank" href="https://www.tokopedia.com/emas/" style="text-decoration: none;"><img src="https://ecs7.tokopedia.net/img/wallet/email/logo-egold_tokopedia.png" alt="Tokopedia Emas - " style="height: 35px;"></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-bottom: 16px; padding-left: 24px; padding-right: 24px; padding-top: 16px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0;">
+                    <tr>
+                        <td>
+                            <p style="font-size: 20px; margin: 0 0 16px;">Halo, {{ .data.UserName }}</p>
+                        </td>
+                    </tr>
+                </table>
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0; min-width: 100%; width: 100%;">
+                    <tr>
+                        <td style="background-color: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 24px; text-align: center;"><img width="175" src="https://ecs7.tokopedia.net/img/wallet/email/eg-monthly-report.png" alt="Laporan bulanan Tokopedia Emas telah terbit">
+                            <p style="font-size: 16px; margin: 16px 0 0;"><b style="color: rgba(0,0,0,.7); font-weight: 700;">Laporan bulanan Tokopedia Emas telah terbit</b></p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-bottom: 16px; padding-left: 24px; padding-right: 24px; padding-top: 16px;">Berikut ringkasan investasi emasmu untuk periode <strong style="color: rgba(0,0,0,.7); font-weight: 700;">{{.data.ReportDate}}</strong>. {{if eq .data.Transaction true}}Kamu bisa pantau detail investasimu dengan download laporan yang terlampir di email ini.{{else}}{{end}}</td>
+        </tr>
+        <tr>
+            <td style="padding-bottom: 16px; padding-left: 24px; padding-right: 24px; padding-top: 16px;">
+                <table cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0;">
+                    <tr>
+                        <td width="70%" align="left">
+                            <p style="color: rgba(0,0,0,.7); font-size: 20px; font-weight: 700;">Ringkasan Investasi</p>
+                        </td>
+                        <td width="30%" align="right"><a style="color: #399c3f; text-decoration: none;"></a></td>
+                    </tr>
+                </table>
+                <table cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0; min-width: 100%; width: 100%;">
+                    <tr>
+                        <td width="40%" align="left" style="padding: 12px 0; vertical-align: top;">Jumlah Emas hingga {{.data.ReportDateLastTwoMonth}}</td>
+                        <td width="60%" align="right" style="padding: 12px 0; vertical-align: top;"><b style="color: rgba(0,0,0,.7); font-weight: 700;">{{.data.LastTwoMonthBalance}}</b></td>
+                    </tr>
+                    <tr>
+                        <td width="40%" align="left" style="border-bottom: 1px solid #e0e0e0; padding: 12px 0; padding-bottom: 24px; vertical-align: top;">Total Transaksi di Bulan {{.data.ReportDateShort}}</td>
+                        <td width="60%" align="right" style="border-bottom: 1px solid #e0e0e0; padding: 12px 0; padding-bottom: 24px; vertical-align: top;"><b style="color: rgba(0,0,0,.7); font-weight: 700;">{{.data.TotalTransaction}}</b></td>
+                    </tr>
+                    <tr>
+                        <td width="40%" align="left" style="padding: 12px 0; padding-bottom: 0; padding-top: 24px; vertical-align: top;">Jumlah Emas per {{.data.ReportLastDate}}</td>
+                        <td width="60%" align="right" style="padding: 12px 0; padding-bottom: 0; padding-top: 24px; vertical-align: top;">
+                            <p style="font-size: 17px; margin: 0;"><b style="color: rgba(0,0,0,.7); font-weight: 700;">{{.data.TotalBalance}}</b></p>
+                            <p style="color: rgba(49, 53, 59, 0.44); margin: 0;">*senilai {{.data.TotalBalancePrice}}</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-bottom: 16px; padding-left: 24px; padding-right: 24px; padding-top: 16px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background: url(https://ecs7.tokopedia.net/img/wallet/email/ic_system_info.png) no-repeat; background-color: #ebf6f6; background-size: 30px; border-radius: 8px; border-spacing: 0; min-width: 100%; padding: 16px; width: 100%;">
+                    <tr>
+                        <td>* Nilai emas berdasarkan harga jual per <strong style="color: rgba(0,0,0,.7); font-weight: 700;">{{.data.SellPriceTime}}</strong> sebesar <strong style="color: rgba(0,0,0,.7); font-weight: 700;">{{.data.SellPrice}}</strong>.</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-bottom: 16px; padding-left: 24px; padding-right: 24px; padding-top: 16px;">
+                <p style="color: rgba(0,0,0,.7); font-size: 20px; font-weight: 700;">Riwayat Kepemilikan Emas</p>
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0; min-width: 100%; width: 100%;">
+                    <tr>
+                        <td align="left" style="border-bottom: 1px solid #f3f4f5;">
+                            <div style="background-color: #f3f4f5; border-top-left-radius: 8px; border-top-right-radius: 8px; height: 20px; margin-top: 0; padding: 8px 8px 0; text-align: center; width: 100px;">{{(index .data.MonthlyDetail 3).Month}}</div>
+                        </td>
+                        <td align="center" style="border-bottom: 1px solid #f3f4f5;">
+                            <div style="background-color: #f3f4f5; border-top-left-radius: 8px; border-top-right-radius: 8px; height: 20px; margin-top: 0; padding: 8px 8px 0; text-align: center; width: 100px;">{{(index .data.MonthlyDetail 2).Month}}</div>
+                        </td>
+                        <td align="center" style="border-bottom: 1px solid #f3f4f5;">
+                            <div style="background-color: #f3f4f5; border-top-left-radius: 8px; border-top-right-radius: 8px; height: 20px; margin-top: 0; padding: 8px 8px 0; text-align: center; width: 100px;">{{(index .data.MonthlyDetail 1).Month}}</div>
+                        </td>
+                        <td align="right" style="border-bottom: 1px solid #f3f4f5;">
+                            <div style="background-color: #d6ffde; border-top-left-radius: 8px; border-top-right-radius: 8px; height: 20px; margin-top: 0; padding: 8px 8px 0; text-align: center; width: 100px;">{{(index .data.MonthlyDetail 0).Month}}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <div style="background-color: #f3f4f5; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; height: 18px; margin-top: -4px; padding: 0 8px 8px; text-align: center; width: 100px;"><b style="color: rgba(0,0,0,.7); font-weight: 700;">{{(index .data.MonthlyDetail 3).Weight}}</b></div>
+                        </td>
+                        <td align="center">
+                            <div style="background-color: #f3f4f5; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; height: 18px; margin-top: -4px; padding: 0 8px 8px; text-align: center; width: 100px;"><b style="color: rgba(0,0,0,.7); font-weight: 700;">{{(index .data.MonthlyDetail 2).Weight}}</b></div>
+                        </td>
+                        <td align="center">
+                            <div style="background-color: #f3f4f5; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; height: 18px; margin-top: -4px; padding: 0 8px 8px; text-align: center; width: 100px;"><b style="color: rgba(0,0,0,.7); font-weight: 700;">{{(index .data.MonthlyDetail 1).Weight}}</b></div>
+                        </td>
+                        <td align="right">
+                            <div style="background-color: #d6ffde; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; height: 18px; margin-top: -4px; padding: 0 8px 8px; text-align: center; width: 100px;"><b style="color: rgba(0,0,0,.7); font-weight: 700;">{{(index .data.MonthlyDetail 0).Weight}}</b></div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-bottom: 16px; padding-left: 24px; padding-right: 24px; padding-top: 16px;">Pantau terus Tokopedia Emas dan nikmati untungnya berinvestasi untuk masa depanmu!</td>
+        </tr>
+        <tr>
+            <td align="center" style="padding-bottom: 16px; padding-left: 24px; padding-right: 24px; padding-top: 16px;"><a style="background-color: #42b549; border-radius: 8px; box-sizing: border-box; color: #fff; display: inline-block; font-size: 14px; font-weight: 700; height: 48px; line-height: 48px; padding: 0 24px; text-align: center; text-decoration: none; width: 240px;" href="https://www.tokopedia.com/emas/?utm_source=lPVaQi6N&utm_medium=jNayrQwO&utm_campaign=CO_TX-FTC-EGOLDACTIVATION-MAINCTA&utm_content=MAINCTA">Ke Tokopedia Emas</a></td>
+        </tr>
+        <tr>
+            <td style="padding-bottom: 16px; padding-left: 24px; padding-right: 24px; padding-top: 16px;">Untuk bantuan atau informasi lebih lanjut hubungi, <a href="https://www.tokopedia.com/help/?utm_source=lPVaQi6N&utm_medium=jNayrQwO&utm_campaign=CO_TX-FTC-EGOLDACTIVATION-HELP&utm_content=HELP" style="color: #399c3f; text-decoration: none;">di sini</a>.</td>
+        </tr>
+        <tr>
+            <td style="padding-bottom: 16px; padding-left: 24px; padding-right: 24px; padding-top: 16px;">
+                <p style="border-top: 1px solid #e0e0e0; color: rgba(0,0,0,.38); font-size: 12px; margin: 0 0 24px; padding-top: 16px;">Email ini dibuat secara otomatis. Mohon tidak mengirimkan balasan ke email ini.</p>
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0;">
+                    <tr>
+                        <td>
+                            <a href="https://www.tokopedia.com/reksa-dana/?utm_source=lPVaQi6N&utm_medium=jNayrQwO&utm_campaign=CO_TX-FTC-EGOLDACTIVATION-ICON&utm_content=ICON" target="_blank" style="text-decoration: none;">
+                                <table cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #e0e0e0; border-radius: 8px; border-spacing: 0; padding: 12px 8px;">
+                                    <tr>
+                                        <td width="50px" align="center"><img src="https://ecs7.tokopedia.net/assets-fintech-email/img/icon/icon-reksadana_tokopedia.png" alt="Tokopedia ReksaDana" style="max-width: 100%;"></td>
+                                        <td width="499px">
+                                            <div style="padding-left: 16px;">
+                                                <p style="font-size: 12px; margin: 0;"><b style="color: rgba(0,0,0,.7); font-weight: 700;">Tokopedia ReksaDana</b></p>
+                                                <p style="color: rgba(0,0,0,.38); font-size: 12px; margin: 0;">Raih keuntungan hingga 7% per tahun. Kini, tersedia produk syariah!</p>
+                                            </div>
+                                        </td>
+                                        <td align="right"><img src="https://ecs7.tokopedia.net/img/wallet/email/ic-caret-right.png" alt="Caret Right" width="8" style="margin-right: 8px; max-width: 100%;"></td>
+                                    </tr>
+                                </table>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 24px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0;">
+                    <tr>
+                        <td align="left" width="300">
+                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing: 0;">
+                                <tr>
+                                    <td>
+                                        <p style="color: rgba(0,0,0,.54); font-size: 12px; margin: 0 0 8px;">Download Aplikasi Tokopedia</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0;">
+                                            <tr>
+                                                <td class="ft-footer__follow-dev">
+                                                    <a target="_blank" href="https://itunes.apple.com/us/app/tokopedia/id1001394201?ls=1&mt=8" style="display: block; margin-right: 4px; text-decoration: none;"><img src="https://ecs7.tokopedia.net/assets-fintech-email/img/icon/icon-app-store_tokopedia.png" alt="App Store" height="44"></a>
+                                                </td>
+                                                <td class="ft-footer__follow-dev">
+                                                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.tokopedia.tkpd&hl=en" style="display: block; margin-right: 4px; text-decoration: none;"><img src="https://ecs7.tokopedia.net/assets-fintech-email/img/icon/icon-google-play_tokopedia.png" alt="Play Store" height="44"></a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="right" width="300">
+                            <table border="0" cellpadding="0" cellspacing="0" style="border-spacing: 0;">
+                                <tr>
+                                    <td align="right">
+                                        <p style="color: rgba(0,0,0,.54); font-size: 12px; margin: 0 0 8px;">Ikuti Kami</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul style="list-style: none; margin: 0; padding: 0;">
+                                            <li style="display: inline-block; margin: 0 2px; margin-left: 0;">
+                                                <a target="_blank" href="https://www.facebook.com/tokopedia/" style="text-decoration: none;"><img src="https://ecs7.tokopedia.net/assets-fintech-email/img/icon/icon-facebook_tokopedia.png" alt="Logo Facebook" height="44"></a>
+                                            </li>
+                                            <li style="display: inline-block; margin: 0 2px;">
+                                                <a target="_blank" href="https://www.instagram.com/tokopedia/" style="text-decoration: none;"><img src="https://ecs7.tokopedia.net/assets-fintech-email/img/icon/icon-instagram_tokopedia.png" alt="Logo Instagram" height="44"></a>
+                                            </li>
+                                            <li style="display: inline-block; margin: 0 2px; margin-right: 0;">
+                                                <a target="_blank" href="https://twitter.com/tokopedia/" style="text-decoration: none;"><img src="https://ecs7.tokopedia.net/assets-fintech-email/img/icon/icon-twitter_tokopedia.png" alt="Logo Twitter" height="44"></a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="background-color: #f8f8f8; border-top: 1px solid #e0e0e0; color: rgba(0,0,0,.38); font-size: 12px; padding: 24px; text-align: center;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-spacing: 0; min-width: 100%; width: 100%;">
+                    <tr>
+                        <td>Jika butuh bantuan, gunakan halaman <a target="_blank" href="https://www.tokopedia.com/bantuan" style="color: #399c3f; text-decoration: none;">Kontak Kami</a>
+                            <br>&copy; 2009-2019, PT Tokopedia</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+---
+title: Asuransi Tokopedia
+userName: "{{.user_name}}"
+introText: >
+  Tak perlu cemas ketinggalan pesawat, delay, atau pun bagasi hilang, 
+  karena kini Tokopedia menyediakan layanan <b>InsurLater</b>. 
+  Kamu bisa beri perlindungan untuk <b>penerbangan yang sudah kamu beli</b> melalui Tokopedia. 
+  Dapatkan perlindungan kompensasi hingga <b>Rp300.000.000</b>.
+introTitle: "Yuk, lindungi penerbangan yang sudah kamu beli melalui Tokopedia!"
+protectionBenefit: 
+- - icon: flight-delay
+    text: Penundaan perjalanan (delay)
+  - icon: flight-miss
+    text: Kehilangan penerbangan lanjutan
+- - icon: baggage-late
+    text: Bagasi terlambat
+  - icon: baggage-protect
+    text: Perlindungan bagasi pribadi
+- - icon: flight-cancel
+    text: Pembatalan perjalanan
+  - icon: accident
+    text: Kecelakaan diri
+---
+
+<table class="body">
+  {{> intro}}
+  <tr>
+    <td class="section">
+      <h2>Manfaat perlindungan</h2>
+      <table>
+        {{#each protectionBenefit}}
+          <tr>
+            {{#each this}}
+            <td><img src="https://ecs7.tokopedia.net/fintech/insurance/icon-{{this.icon}}.png" width="32" class="my2 mr4" /></td>
+            <td class="pr2">{{{this.text}}}</td>
+            {{/each}}
+          </tr>
+        {{/each}}
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="section">
+      <h2>Penerbangan yang bisa kamu lindungi</h2>
+      <table class="full-width">
+        \{{ range .orders }}
+        <tr>
+          <td class="py4" style="border-bottom: 1px solid #ddd">
+            <img src="\{{.flight_logo}}" width="40px"/>
+          </td>
+          <td class="p4"  style="border-bottom: 1px solid #ddd">
+            <p><small>\{{.origin}} --> \{{.destination}}</small></p>
+            <p><small><b>\{{.total_passenger}}</b></small></p>
+            <p><b><small>\{{.departure_time_str}}</small></b></p>
+          </td>
+          <td class="py4 align-right"  style="border-bottom: 1px solid #ddd">
+            <p>
+              <b><small>\{{.price_per_pax_str}}</b>/penumpang</small>
+            </p>
+            <p>
+              <a class="btn main ghost small mt8"
+                 href="\{{.url_protection}}?utm_source=sendgrid&utm_medium=jnayrqwo&utm_campaign=ft_insurance_insurelater-lindungi"
+              >
+                Lindungi
+              </a>
+            </p>
+          </td>
+        </tr>
+        \{{ end }}
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="section">
+      <h2>Ringkasan pembelian tiket pesawat</h2>
+      <table class="gray-box full-width">
+        <tr>
+          <td width="40%">Nama Pembeli:</td>
+          <td width="60%"><b>\{{.user_name}}</b></td>
+        </tr>
+      </table>
+      <p class="py2">
+        <small>
+          Lihat informasi lebih detail tentang cakupan perlindungan, cara klaim, dan syarat ketentuan dengan klik tombol dibawah ini.
+        </small>
+      </p>
+      <a 
+        class="btn block main"
+        href="https://www.tokopedia.com/asuransi/insurlater/order/?utm_source=sendgrid&utm_medium=jnayrqwo&utm_campaign=ft_insurance_insurelater-lindungi" >
+          Info Asuransi Penerbangan
+      </a>
+    </td>
+  </tr>
+
+  {{> footer}}
+</table>

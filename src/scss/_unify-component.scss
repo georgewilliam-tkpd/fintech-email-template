@@ -7,9 +7,16 @@ a.btn {
   font-weight: 800;
   padding: 12px 24px;
   text-align: center;
+
   &.block {
     width: 100%;
+    box-sizing: border-box;
   }
+
+  &.small {
+    padding: 6px 12px;
+  }
+
   &.main {
     color: $N0;
     background-color: $G500;
@@ -17,6 +24,16 @@ a.btn {
       color: $G500;
       background-color: $N0;
       border: 1px solid $G500;
+    }
+  }
+
+  &.alternate {
+    color: $N0;
+    background-color: $N500;
+    &.ghost {
+      color: $N500;
+      background-color: $N0;
+      border: 1px solid $N100;
     }
   }
 }

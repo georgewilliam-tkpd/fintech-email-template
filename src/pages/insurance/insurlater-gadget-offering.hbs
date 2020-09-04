@@ -1,0 +1,110 @@
+---
+title: Asuransi Tokopedia
+userName: "{{.name}}"
+introText: >
+  Segera proteksi gadget atau elektronik baru kamu sekarang dengan Insurlater. 
+  Dengan menambahkan proteksi kamu bisa mendapatkan 
+  <b>perlindungan dari berbagai macam jenis kerusakan hingga 12 bulan untuk barang elektronik atau gadget baru</b> 
+  yang telah kamu beli melalui Tokopedia. 
+  Penawaran ini hanya berlaku maksimal hingga 30 hari kedepan
+introTitle: Segera proteksi gadget atau elektronik-mu sekarang! Penawaran berlaku hanya 30 hari
+iconHref: https://www.tokopedia.com/promo/finansial-proteksi/
+iconUrl: 'https://ecs7.tokopedia.net/fintech/insurance/banner-promo-insurlater-20081917.png'
+iconWidth: 528px
+protectionBenefit: 
+- icon: https://ecs7.tokopedia.net/fintech/insurance/icon-breakage.png
+  text: Terjatuh atau kejadian yang tidak disengaja (Gadget, Elektronik, Furniture)
+- icon: https://ecs7.tokopedia.net/fintech/insurance/icon-teardrop.png
+  text: Terkena atau kemasukan cairan (Gadget, Elektronik)
+- icon: https://ecs7.tokopedia.net/fintech/insurance/icon-mask.png
+  text: Tindakan kriminal (Gadget, Elektronik, Furniture)
+- icon: https://ecs7.tokopedia.net/fintech/insurance/icon-flame.png
+  text: Kerusakan akibat Kebakaran, sambaran petir, dan ledakan
+---
+
+<table class="body">
+  {{> intro}}
+  <tr>
+    <td class="section">
+      <h2>Manfaat perlindungan</h2>
+      <table>
+        {{#each protectionBenefit}}
+          <tr>
+            <td><img src={{this.icon}} width="32" class="my2 mr4" /></td>
+            <td>{{{this.text}}}</td>
+          </tr>
+        {{/each}}
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="section">
+      <h2>Barang yang bisa kamu lindungi</h2>
+      <table>
+        \{{ range .data.orders }}
+        <tr>
+          <td>
+            <p>Toko: <span class="color-g500">\{{.shop_name}}</span></p>
+            <p>No. Invoice: <b class="color-g500">\{{.invoice}}</b></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table>
+              \{{ range .items }}
+              <tr>
+                <td class="py4" style="border-bottom: 1px solid #ddd">
+                  <img src="\{{.product_image_url}}" width="40px"/>
+                </td>
+                <td class="p4"  style="border-bottom: 1px solid #ddd">
+                  <p><small>\{{.product_name}}</small></p>
+                  <p><b><small>\{{.product_quantity}} x \{{.product_amount_fmt}}</small></b></p>
+                </td>
+                <td class="py4 align-right"  style="border-bottom: 1px solid #ddd">
+                  <p>
+                    <b><small>\{{.insurance_amount_fmt}}</b>/barang</small>
+                  </p>
+                  <p>
+                    <a class="btn main ghost small mt8"
+                      href="https://wwww.tokopedia.com/asuransi/insurlater/order/?utm_source=sendgrid&utm_medium=jnayrqwo&utm_campaign=ft_insurance_insurelater-lindungi"
+                    >
+                      Lindungi
+                    </a>
+                  </p>
+                </td>
+              </tr>
+              \{{ end }}
+            </table>
+          </td>
+        </tr>
+        \{{ end }}
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="section">
+      <h2>Ringkasan pembelian barang</h2>
+      <table class="gray-box full-width">
+        <tr>
+          <td width="40%">Nama Pembeli:</td>
+          <td width="60%"><b>\{{.data.user_name}}</b></td>
+        </tr>
+        <tr>
+          <td width="40%">Tanggal Transaksi:</td>
+          <td width="60%"><b>\{{.data.finish_date_fmt}}</b></td>
+        </tr>
+      </table>
+      <p class="py2">
+        <small>
+          Lihat informasi lebih detail tentang cakupan perlindungan, cara klaim, dan syarat ketentuan dengan klik tombol dibawah ini.
+        </small>
+      </p>
+      <a 
+        class="btn block main"
+        href="https://www.tokopedia.com/asuransi/insurlater/order/?utm_source=sendgrid&utm_medium=jnayrqwo&utm_campaign=ft_insurance_insurelater-penawaran">
+          Lihat Penawaran InsurLater
+      </a>
+    </td>
+  </tr>
+  {{> footer}}
+</table>

@@ -1,0 +1,136 @@
+---
+title: Tokopedia Emas - Laporan Bulanan
+userName: "{{ .data.UserName }}"
+introTitle: Laporan bulanan Tokopedia Emas telah terbit
+introText: > 
+ Berikut ringkasan investasi emasmu untuk periode <b>{{ .data.ReportDate }}</b>.
+ Kamu bisa pantau detail investasimu dengan mengunduh laporan di bawah ini.
+goldHistory: 
+- month: "{{(index .data.MonthlyDetail 3).Month }}"
+  weight: "{{(index .data.MonthlyDetail 3).Weight }}"
+- month: "{{(index .data.MonthlyDetail 2).Month }}"
+  weight: "{{(index .data.MonthlyDetail 2).Weight }}"
+- month: "{{(index .data.MonthlyDetail 1).Month }}"
+  weight: "{{(index .data.MonthlyDetail 1).Weight }}"
+---
+<!--
+{
+  "template": "e-gold_monthly_report",
+  "target": [
+    {
+      "email": "nararya.anugraha@tokopedia.com",
+      "phone_number": "",
+      "user_id": 8968252  
+    }
+  ],
+  "params": {
+    "data": {
+      "Email": "pengguna.ujicoba@gmail.com",
+      "FirstDateReport": "2020-08-01T00:00:00+07:00",
+      "LastDateReport": "2020-08-31T00:00:00+07:00",
+      "LastTwoMonthBalance": "0 gr",
+      "LastTwoMonthBalanceVal": 0,
+      "MonthlyDetail": [
+        {
+          "Month": "Agu 2020",
+          "Weight": "0,0007 gr"
+        },
+        {
+          "Month": "Jul 2020",
+          "Weight": "0 gr"
+        },
+        {
+          "Month": "Jun 2020",
+          "Weight": "0 gr"
+        },
+        {
+          "Month": "Mei 2020",
+          "Weight": "0 gr"
+        }
+      ],
+      "ReportDate": "Agustus 2020",
+      "ReportDateLastTwoMonth": "Jul 2020",
+      "ReportDateShort": "Agu 2020",
+      "ReportLastDate": "31 Agu 2020",
+      "SellPrice": "Rp 929.840/gr",
+      "SellPriceTime": "02 Sep 2020 14:59 WIB",
+      "SellPriceVal": 929840,
+      "TotalBalance": "0,0007 gr",
+      "TotalBalancePrice": "Rp 650",
+      "TotalTransaction": "+ 0,0007 gr",
+      "Transaction": true,
+      "TransactionType": "Plus",
+      "UserID": 99774203,
+      "UserName": "Pengguna Ujicoba"
+    },
+    "notiftracker_id": "5866eae547d5043c5401b12055d816df",
+    "notiftracker_start": 1599033575
+  },
+  "attachments": [],
+  "pretend": false,
+  "is_test": true,
+  "push_notification_images": [],
+  "notification_types": []
+}
+
+-->
+<table class="body">
+  {{> intro }}
+  <tr>
+    <td class="section">
+      <h2>Ringkasan Investasi</h2>
+      <table class="gray-box" width="100%">
+        <tr>
+          <td width="40%" align="left"><small>Jumlah Emas hingga \{{ .data.ReportDateLastTwoMonth }}</small></td>
+          <td width="60%" align="right"><b>\{{ .data.LastTwoMonthBalance }}</b></td>
+        </tr>
+        <tr>
+          <td width="40%" align="left"><small>\{{ .data.ReportDate }}</small></td>
+          <td width="60%" align="right"><b>\{{ .data.TotalTransaction }}</b></td>
+        </tr>
+        <tr>
+          <td colspan="2"><hr/></td>
+        </tr>
+        <tr>
+          <td width="40%" align="left"><small>Jumlah Emas per \{{ .data.ReportLastDate }}</small></td>
+          <td width="60%" align="right">
+            <p><b>\{{.data.TotalBalance }}</b></p>
+            <p><small>*senilai \{{.data.TotalBalancePrice }}</small></p>
+          </td>
+        </tr>
+      </table>
+      <div class="ticker mt4" width="100%">
+        * Nilai emas berdasarkan harga jual per <strong> \{{ .data.SellPriceTime }} </strong> sebesar <strong>\{{ .data.SellPrice }}/gr</strong>.
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td class="section">
+      <h2>Riwayat Kepemilikan Emas</h2>
+      <table border="0" cellpadding="0" width="100%">
+        <tr>
+          {{#each goldHistory }}
+            <td class="align-left p3 bordered">
+              <p>{{this.month }}</p>
+              <p><b>{{this.weight }}</b></p>
+            </td>
+            <td width="12px"></td>
+          {{/each }}
+          <td class="align-left p3 bordered" style="background-color:#EBFFEF; border-color: #4FD15A">
+            <p>\{{(index .data.MonthlyDetail 0).Month }}"</p>
+            <p><b>\{{(index .data.MonthlyDetail 0).Weight }}</b></p>
+          </td>
+        </tr>
+      </table> 
+   </td>
+  </tr>
+  <tr>
+    <td class="section">
+      <p>Pantau terus Tokopedia Emas dan nikmati untungnya berinvestasi untuk masa depanmu!</p>
+      <a href="https://www.tokopedia.com/emas/?utm_source=lPVaQi6N&utm_medium=jNayrQwO&utm_campaign=CO_TX-FTC-EGOLDACTIVATION-MAINCTA&utm_content=MAINCTA" class="btn main block mt4" href="https://www.tokopedia.com/emas/">
+        Ke Tokopedia Emas
+      </a>
+    </td>
+  </tr>
+  {{> footer }}
+</table>

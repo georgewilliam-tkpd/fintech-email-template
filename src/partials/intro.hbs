@@ -1,27 +1,33 @@
 <tr>
   <td class="section pt8">
     <a target="_blank" href="https://www.tokopedia.com/">
-      <img class="logo" src="https://ecs7.tokopedia.net/assets-fintech-email/img/logo/logo-tokopedia.png"
-        alt="Logo Tokopedia" />
+      <img 
+        class="logo" 
+        alt="Logo Tokopedia" 
+        src="https://ecs7.tokopedia.net/assets-fintech-email/img/logo/logo-tokopedia.png"
+      />
     </a>
   </td>
 </tr>
-
+{{#if iconUrl}}
 <tr>
   <td class="align-center">
-    {{#if iconWidth}}
-    <img width="{{iconWidth}}" src="{{iconUrl}}" alt="{{iconAlt}}" style="margin: 48px auto" />
+    {{#if iconHref}}
+      <a href={{iconHref}}>
+        <img width="{{safeValue iconWidth '100%'}}" src="{{iconUrl}}" alt="{{iconAlt}}" style="margin: 16px auto" />
+      </a>
     {{else}}
-    <img width="100%" src="{{iconUrl}}" alt="{{iconAlt}}" />
+      <img width="{{safeValue iconWidth '100%'}}" src="{{iconUrl}}" alt="{{iconAlt}}" style="margin: 16px auto" />
     {{/if}}
   </td>
 </tr>
+{{/if}}
 <tr>
   <td class="section">
     <p>Hai <strong>{{ userName }}</strong>,</p>
-    <h1><strong>{{ introTitle }}</b></strong></h1>
+    <h2 class="mt4"><strong>{{ introTitle }}</b></strong></h2>
     {{#if introText}}
-    <p>{{{introText}}}</p>
+      <p>{{{introText}}}</p>
     {{/if}}
   </td>
 </tr>

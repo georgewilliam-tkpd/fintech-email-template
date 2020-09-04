@@ -17,9 +17,6 @@ body {
 /* Text Styles */
 strong, b {
   font-weight: 800;
-}
-
-strong {
   color: $N500;
 }
 
@@ -33,14 +30,6 @@ small, .small  {
 
 .tiny {
   font-size: 10px;
-}
-
-.green {
-  color: $G500;
-}
-
-.transaction {
-  color: $Y500;
 }
 
 /* Elements */
@@ -74,9 +63,12 @@ h4 {
 
 p {
   margin: 0;
-  margin-bottom: 8px;
 }
 
+hr {
+  border: 0;
+  border-top: 1px solid $N100;
+}
 
 td {
   padding: 0;
@@ -103,6 +95,10 @@ table.body {
   }
 }
 
+.rounded-corner {
+  border-radius: 12px;
+}
+
 .gray-box {
   padding: 16px;
   border-radius: 12px;
@@ -115,27 +111,21 @@ table.body {
 .footer {
   .product {
     width: 180px;
-    text-align: center;
     h4 {
-      color: $N500
+      color: $N500;
+      margin: 0;
+      margin-bottom: 4px;
     }
     small {
+      line-height: 15px;
       font-weight: 400;
       color: $N300;
     }
-    .icon,.desc {
-      padding: 8px;
+    >div {
+      height: 108px;
+      padding: 16px;
       border-radius: 8px;
       border: 1px solid $N100;
-    }
-    .desc {
-      margin-top: -32px;
-      padding-top: 48px;
-      padding-bottom: 24px;
-    }
-    .icon {
-      background-color: $N0;
-      display: inline-block;
     }
   }
 }

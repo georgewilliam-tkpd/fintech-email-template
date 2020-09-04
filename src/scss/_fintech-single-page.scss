@@ -3,12 +3,12 @@
 
 .ft-giftcard-sms {
   &__container {
-    background-color: $white-base;
+    background-color: $N0;
 
     @media (min-width: 500px) {
       width: 500px;
       margin: 40px auto 24px;
-      border: 1px solid $gray-alto;
+      border: 1px solid $N100;
     }
   }
 
@@ -28,7 +28,7 @@
       font-size: 11px;
       border-radius: 8px;
       background-color: #f8f8f8;
-      color: $black-lighter;
+      color: $N200;
     }
   }
 
@@ -76,7 +76,7 @@
       font-size: 16px;
       font-weight: bold;
       line-height: 1.88;
-      color: $black-base;
+      color: $N600;
     }
 
     .step {
@@ -90,7 +90,7 @@
         margin-bottom: 16px;
         align-items: center;
         font-size: 12px;
-        color: $black-lighter;
+        color: $N200;
       }
     }
   }

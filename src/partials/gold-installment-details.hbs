@@ -1,0 +1,15 @@
+<tr>
+  <td class="section">
+    <h2>Ringkasan pengajuan</h2>
+    <div class="gray-box">
+      <table class="full-width">
+        {{#each applicationSummary}}
+        <tr>
+          <td width="50%" class="align-left">{{this.label}}:</td>
+          <td width="50%"><strong>{{{this.value}}}</strong></td>
+        </tr>
+        {{/each}}
+      </table>
+    </div>
+  </td>
+</tr>

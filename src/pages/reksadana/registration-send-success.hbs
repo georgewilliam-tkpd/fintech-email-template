@@ -1,0 +1,60 @@
+---
+title: Pengajuan pendaftaran Reksa Dana sedang diproses
+userName: "{{.name}}"
+introTitle: Pengajuan pendaftaran Reksa Dana sedang diproses
+introText: > 
+  Terima kasih telah mendaftar di Tokopedia ReksaDana. 
+  Jika pengajuanmu sudah disetujui, kami akan mengabari melalui e-mail & kamu bisa mulai berinvestasi. 
+sellSummary: 
+- label: Nominal Penjualan
+  value: "{{.amount}}"
+- label: Produk
+  value: "{{if eq .product_id 2.00}} Syariah Mandiri {{else}} Syailendra Pasar Uang {{end}}"
+- label: Order ID
+  value: "{{.order_id}}"
+- label: Waktu Transaksi
+  value: "{{.txn_time}}"
+- label: Tujuan Penjualan
+  value: '{{.payment_method}}<br/><small class="thin">{{.saldo_email}}</small>'
+---
+<!-- 
+
+{
+  "template": "mutualfund_registration_sent_success",
+  "target": [
+    {
+      "email": "nararya.anugraha@tokopedia.com",
+      "phone_number": "",
+      "user_id": 0
+    }
+  ],
+  "params": {
+    "name": "Pengguna Ujicoba"
+  },
+  "attachments": [],
+  "pretend": false,
+  "is_test": true,
+  "push_notification_images": [],
+  "notification_types": []
+}
+
+-->
+<table class="body">
+  {{> intro}}
+  <tr>
+    <td class="section">
+      <table cellpadding="0" cellspacing="0" width="100%" class="borderless">
+        <tr>
+          <td width="49%">
+            <a href="https://www.tokopedia.com/keuangan/" class="btn main ghost block">Cek Produk Keuangan Lainnya</a>
+          </td>
+          <td width="2%"></td>
+          <td width="49%">
+            <a href="https://www.tokopedia.com/reksa-dana" class="btn main block">Cek Status Pengajuan</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  {{> footer}}
+</Pengajuan pendaftaran Reksa Dana sedang diproses

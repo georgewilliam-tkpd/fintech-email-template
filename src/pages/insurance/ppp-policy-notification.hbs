@@ -1,0 +1,67 @@
+---
+title: Asuransi Tokopedia
+userName: "{{.data.contact_name}}"
+introTitle: "Selamat, {{.data.product_name}} kamu telah aktif"
+protectionSummary: 
+- label: Nomor Invoice
+  value: '<span class="color-g500">{{.data.invoice}}</span>'
+- label: Nama Barang
+  value: "{{.data.item_name}}"
+- label: Tanggal Transaksi
+  value: "{{.data.completed_payment}}"
+- label: Nama Pembeli
+  value: "{{.data.contact_name}}"
+- label: Nomor Polis
+  value: "{{.data.policy_number}}"
+- label: Masa Perlindungan
+  value: '{{.data.insurance_duration}}<small class="thin">{{.data.insurance_date_duration}}</small>'
+---
+<table class="body">
+  {{> intro}}
+  <tr>
+    <td class="section pt0">
+      <p>Terima kasih, kini tagihan yang kamu bayar melalui Tokopedia telah terlindungi dengan \{{.data.product_name}} dari \{{.data.insurance_company}}.</p>
+    </td>
+  </tr>
+  <tr>
+    <td class="section">
+      <h2>
+        Ringkasan Proteksi
+      </h2>
+      <table class="gray-box full-width">
+        {{#each protectionSummary}}
+          <tr>
+            <td>{{this.label}}</td>
+            <td><b>{{{this.value}}}</b></td>
+          </tr>
+        {{/each}}
+      </table>
+    </td>
+  </tr>
+  \{{.data.protection_benefit | unescape }}
+  <tr>
+    <td class="section">
+      <p class="mb4">Kamu bisa ajukan klaim atau cek cakupan perlindungan, cara klaim, dan syarat ketentuan lainnya dengan klik tombol di bawah:</p>
+      <table class="full-width">
+        <tr>
+          <td class="pr2">
+            <a class="btn alternate ghost block" href="http://www.tokopedia.com/asuransi?utm_source=sendgrid&utm_medium=jnayrqwo&utm_campaign=ft_insurance_police_pg_info">
+              Info Asuransi
+            </a>
+          </td>
+          <td class="pl2">
+            <a class="btn main block" href="http://www.tokopedia.com/asuransi/klaim?utm_source=sendgrid&utm_medium=jnayrqwo&utm_campaign=ft_insurance_police_pg_klaim">
+              Ajukan Klaim
+            </a>
+
+          </td>
+        </tr>
+      </table>
+      <p class="rounded-corner background-color-t100 p2 mt4">
+        Pada e-mail ini <b>terlampir polis asuransi</b> sebagai bukti perjanjian yang sah antara pihak Tertanggung dengan pihak asuransi.
+      </p>
+    </td>
+  </tr>
+  \{{.data.protection_contract | unescape }}
+  {{> footer}}
+</table>

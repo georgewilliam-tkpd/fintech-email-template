@@ -1,36 +1,4 @@
-/* Base Color */
-$white-base: #ffffff;
-$green-base: #42b549;
-$orange-base: #ff5722;
-$red-base: #d50000;
-
-/* Black */
-$black-base: rgba(0, 0, 0, 0.7);
-$black-light: rgba(0, 0, 0, 0.54);
-$black-lighter: rgba(0, 0, 0, 0.38);
-$black-disabled: rgba(0, 0, 0, 0.18);
-
-/* Green */
-$green-apple: #399c3f;
-$green-feta: #f3fef3;
-
-/* Gray */
-$gray-alabaster: #f8f8f8;
-$gray-wild-sand: #f6f6f6;
-$gray-seashell: #f1f1f1;
-$gray-alto: #e0e0e0;
-$gray-gallery: #efefef;
-
-/* Red */
-$red-alizarin-crimson: #ea212d;
-$red-carnation: #f05f68;
-
-/* Yellow */
-$yellow-amber: #ffc107;
-$yellow-warning: #fffae6;
-
-/*Unify */
-
+/*Gray*/
 $N0: #FFFFFF;
 $N50: #F3F4F5;
 $N75: #E5E7E9;
@@ -89,3 +57,76 @@ $Y200: #FFF0B3;
 $Y300: #FFC400;
 $Y400: #FF8B00;
 $Y500: #FA591D;
+
+/*---- List based ---*/
+
+$colors: (
+  "n0": #ffffff,
+  "n50": #f3f4f5,
+  "n75": #e5e7e9,
+  "n100": #dbdee2,
+  "n150": #b5bbc5,
+  "n200": #9fa6b0,
+  "n300": #838994,
+  "n400": #6c727c,
+  "n500": #52565e,
+  "n600": #40454c,
+  "n700": #31353b,
+  
+  /*red*/
+  "r100": #ffeaef,
+  "r200": #ffccd9,
+  "r300": #fd8aa7,
+  "r400": #ff5c84,
+  "r500": #ef144a,
+  "r600": #d6001c,
+  
+  /*green*/
+  "g100": #ebffef,
+  "g200": #d6ffde,
+  "g300": #82ef95,
+  "g400": #4fd15a,
+  "g500": #03ac0e,
+  "g600": #12883d,
+  
+  /*blue*/
+  "b100": #e5f5ff,
+  "b200": #ccebff,
+  "b300": #77caff,
+  "b400": #32afff,
+  "b500": #009bff,
+  "b600": #0066a9,
+  
+  /*purple*/
+  "p100": #fbe7ff,
+  "p200": #eebbff,
+  "p300": #d07eff,
+  "p400": #ac43f6,
+  "p500": #9022dc,
+  "p600": #7a08c9,
+  
+  /*teal*/
+  "t100": #ebf6f6,
+  "t200": #d2f2f2,
+  "t300": #b0e2e5,
+  "t400": #84c6c9,
+  "t500": #689c9e,
+  "t600": #3a6e70,
+  
+  /*yellow*/
+  "y100": #fffae6,
+  "y200": #fff0b3,
+  "y300": #ffc400,
+  "y400": #ff8b00,
+  "y500": #fa591d,  
+);
+
+@each $name, $hex in $colors {
+  .color-#{$name}, .color-#{$name} b {
+    color: $hex;
+  }
+  
+  .background-color-#{$name} {
+    background-color: $hex;
+  }
+}
