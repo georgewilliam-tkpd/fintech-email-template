@@ -9,20 +9,18 @@ Main features:
 ## Installation
 Clone this repo, then run this command:
 ```
-npm install
+yarn install
 ```
 
 After the installation is complete, run another command:
 ```
-npm start
+yarn start
 ```
 Open browser and visit localhost:3000/product-name/page-name.html
 
 ## Ready to Produce
 Run this command:
 ```
-npm run build
+yarn build
 ```
 Copy the **dist** folder and shipped to Software Engineer Team
-
-## :) Happy Coding!
