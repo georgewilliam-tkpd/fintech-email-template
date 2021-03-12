@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" style="background-color: #f3f4f5; box-sizing: border-box; color: #838994; font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 400; line-height: 20px; margin: 0;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Asuransi Tokopedia | Tokopedia</title>
+</head>
+
+<body style="background-color: #f3f4f5; box-sizing: border-box; color: #838994; font-family: 'Open Sans',sans-serif; font-size: 14px; font-weight: 400; line-height: 20px; margin: 0;">
+    <table style="background-color: #fff; border: 1px solid #dbdee2; border-spacing: 0; margin: 40px auto 24px; width: 600px;">
+        <tr>
+            <td style="padding: 16px 32px; padding-top: 32px !important;">
+                <a target="_blank" href="https://www.tokopedia.com/" style="color: #03ac0e; font-weight: 800; text-decoration: none;">
+                    <img alt="Logo Tokopedia" src="https://ecs7.tokopedia.net/assets-fintech-email/img/logo/logo-tokopedia.png" style="width: 144px;">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 16px 32px;">
+                <p style="margin: 0;">Hai <strong style="color: #52565e; font-weight: 800;">Toppers</strong>,</p>
+                <h1 style="color: #52565e; font-size: 20px; font-weight: 800; line-height: 26px; margin: 0; margin-bottom: 16px; margin-top: 16px;"><strong style="color: #52565e; font-weight: 800;">Segera proteksi gadget atau elektronik-mu sekarang! Penawaran berlaku hanya 30 hari</strong></h1>
+                <p style="margin: 0;">Segera proteksi gadget atau elektronik baru kamu sekarang dengan Insurlater. Dengan menambahkan proteksi kamu bisa mendapatkan <b style="color: #52565e; font-weight: 800;">perlindungan dari berbagai macam jenis kerusakan hingga 12 bulan untuk barang elektronik atau gadget baru</b> yang
+                    telah kamu beli melalui Tokopedia. Penawaran ini hanya berlaku maksimal hingga 30 hari kedepan</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 16px 32px;">
+                <h2 style="color: #52565e; font-size: 18px; font-weight: 800; line-height: 24px; margin: 0; margin-bottom: 16px;">Manfaat perlindungan</h2>
+                <table>
+                    <tr>
+                        <td style="padding: 0;">
+                            <img src="https://ecs7.tokopedia.net/fintech/insurance/icon-breakage.png" width="32" style="margin-bottom: 8px; margin-right: 16px; margin-top: 8px;">
+                        </td>
+                        <td style="padding: 0;">Terjatuh, retak, atau kejadian lain yang tidak disengaja</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0;">
+                            <img src="https://ecs7.tokopedia.net/fintech/insurance/icon-teardrop.png" width="32" style="margin-bottom: 8px; margin-right: 16px; margin-top: 8px;">
+                        </td>
+                        <td style="padding: 0;">Terkena atau kemasukan cairan</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0;">
+                            <img src="https://ecs7.tokopedia.net/fintech/insurance/icon-mask.png" width="32" style="margin-bottom: 8px; margin-right: 16px; margin-top: 8px;">
+                        </td>
+                        <td style="padding: 0;">Tindakan kriminal seperti perampokan, penodongan, dan kerusuhan</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0;">
+                            <img src="https://ecs7.tokopedia.net/fintech/insurance/icon-flame.png" width="32" style="margin-bottom: 8px; margin-right: 16px; margin-top: 8px;">
+                        </td>
+                        <td style="padding: 0;">Terbakar, tersambar petir, atau terkena ledakan</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 16px 32px;">
+                <h2 style="color: #52565e; font-size: 18px; font-weight: 800; line-height: 24px; margin: 0; margin-bottom: 16px;">Barang yang bisa kamu lindungi</h2>
+                <table width="100%">{{ range .data.orders }}
+                    <tr>
+                        <td style="padding: 0;">
+                            <p style="margin: 0;">Toko: <span style="color: #03ac0e;">{{.shop_name}}</span>
+                            </p>
+                            <p style="margin: 0;">No. Invoice: <b style="color: #03ac0e; font-weight: 800;">{{.invoice}}</b>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0;">
+                            <table width="100%">{{ range .items }}
+                                <tr>
+                                    <td style="border-bottom: 1px solid #ddd; padding: 0; padding-bottom: 16px !important; padding-top: 16px !important;">
+                                        <img src="{{.product_image_url}}" width="40px">
+                                    </td>
+                                    <td style="border-bottom: 1px solid #ddd; padding: 16px !important;">
+                                        <p style="margin: 0;"><small style="font-size: 12px;">{{.product_name}}</small>
+                                        </p>
+                                        <p style="margin: 0;"><b style="color: #52565e; font-weight: 800;"><small style="font-size: 12px;">{{.product_quantity}} x {{.product_amount_fmt}}</small></b>
+                                        </p>
+                                    </td>
+                                    <td style="border-bottom: 1px solid #ddd; padding: 0; padding-bottom: 16px !important; padding-top: 16px !important; text-align: right;">
+                                        <p style="margin: 0;"><b style="color: #52565e; font-weight: 800;"><small style="font-size: 12px;">{{.insurance_amount_fmt}}</small></b>/barang</p>
+                                        <p style="margin: 0;"><a href="https://wwww.tokopedia.com/asuransi/insurlater/order/?utm_source=sendgrid&utm_medium=jnayrqwo&utm_campaign=ft_insurance_insurelater-lindungi" style="background-color: #fff; border: 1px solid #03ac0e; border-radius: 8px; color: #03ac0e; display: inline-block; font-size: 12px; font-weight: 800; margin-top: 32px; padding: 6px 12px; text-align: center; text-decoration: none;">Lindungi</a>
+                                        </p>
+                                    </td>
+                                </tr>{{ end }}
+                            </table>
+                        </td>
+                    </tr>{{ end }}
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 16px 32px;">
+                <h2 style="color: #52565e; font-size: 18px; font-weight: 800; line-height: 24px; margin: 0; margin-bottom: 16px;">Ringkasan pembelian barang</h2>
+                <table style="background-color: #f3f4f5; border-radius: 12px; padding: 16px; width: 100%;">
+                    <tr>
+                        <td width="40%" style="padding: 8px;">Nama Pembeli:</td>
+                        <td width="60%" style="padding: 8px;"><b style="color: #52565e; font-weight: 800;">{{.data.user_name}}</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="40%" style="padding: 8px;">Tanggal Transaksi:</td>
+                        <td width="60%" style="padding: 8px;"><b style="color: #52565e; font-weight: 800;">{{.data.finish_date_fmt}}</b>
+                        </td>
+                    </tr>
+                </table>
+                <p style="margin: 0; padding-bottom: 8px !important; padding-top: 8px !important;"><small style="font-size: 12px;">Lihat informasi lebih detail tentang cakupan perlindungan, cara klaim, dan syarat ketentuan dengan klik tombol dibawah ini.</small>
+                </p><a href="https://www.tokopedia.com/asuransi/insurlater/order/?utm_source=sendgrid&utm_medium=jnayrqwo&utm_campaign=ft_insurance_insurelater-penawaran" style="background-color: #03ac0e; border-radius: 8px; box-sizing: border-box; color: #fff; display: inline-block; font-weight: 800; padding: 12px 24px; text-align: center; text-decoration: none; width: 100%;">Lihat Penawaran</a>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 16px 32px; padding-top: 0 !important;">
+                <table style="margin-top: 24px;">
+                    <tr>
+                        <td style="padding: 0; width: 180px;">
+                            <div style="border: 1px solid #dbdee2; border-radius: 8px; height: 140px; padding: 16px;">
+                                <a href="https://www.tokopedia.com/reksa-dana/" target="_blank" style="color: #03ac0e; font-weight: 800; text-decoration: none;">
+                                    <img src="https://ecs7.tokopedia.net/assets-fintech-email/img/icon/icon-reksadana_tokopedia.png" alt="Icon Tokopedia Reksadana" width="32">
+                                    <h4 style="color: #52565e; font-size: 14px; font-weight: 800; line-height: 20px; margin: 0; margin-bottom: 16px;">Reksa Dana</h4><small style="color: #838994; font-size: 12px; font-weight: 400;">Nabung dengan keuntungan hingga 6,5% per tahun</small>
+                                </a>
+                            </div>
+                        </td>
+                        <td width="16px" style="padding: 0;"></td>
+                        <td style="padding: 0; width: 180px;">
+                            <div style="border: 1px solid #dbdee2; border-radius: 8px; height: 140px; padding: 16px;">
+                                <a href="https://www.tokopedia.com/emas/" target="_blank" style="color: #03ac0e; font-weight: 800; text-decoration: none;">
+                                    <img src="https://ecs7.tokopedia.net/assets-egold-frontend/icon-gold-stack.png" alt="Icon Tokopedia Emas" width="32">
+                                    <h4 style="color: #52565e; font-size: 14px; font-weight: 800; line-height: 20px; margin: 0; margin-bottom: 16px;">Emas</h4><small style="color: #838994; font-size: 12px; font-weight: 400;">Bisa nabung emas mulai dari Rp5.000</small>
+                                </a>
+                            </div>
+                        </td>
+                        <td width="16px" style="padding: 0;"></td>
+                        <td style="padding: 0; width: 180px;">
+                            <div style="border: 1px solid #dbdee2; border-radius: 8px; height: 140px; padding: 16px;">
+                                <a href="https://www.tokopedia.com/asuransi/" target="_blank" style="color: #03ac0e; font-weight: 800; text-decoration: none;">
+                                    <img src="https://ecs7.tokopedia.net/assets-fintech-email/img/icon/icon-insurance_tokopedia.png" alt="Icon Tokopedia Asuransi" width="32">
+                                    <h4 style="color: #52565e; font-size: 14px; font-weight: 800; line-height: 20px; margin: 0; margin-bottom: 16px;">Asuransi</h4><small style="color: #838994; font-size: 12px; font-weight: 400;">Temukan asuransi sesuai dengan kebutuhanmu</small>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <p style="margin: 0; padding-bottom: 16px !important; padding-top: 16px !important;"><small style="font-size: 12px;">Mohon tidak membalas e-mail ini. Jika butuh bantuan, silakan <a href="https://tokopedia.com/help" style="color: #03ac0e; font-weight: 800; text-decoration: none;">hubungi kami</a></small>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 16px 32px;">
+                <table width="100%">
+                    <tr style="font-size: 10px;">
+                        <td width="60%" style="padding: 0; padding-bottom: 8px !important;">Download Aplikasi Tokopedia</td>
+                        <td width="40%" style="padding: 0; padding-bottom: 8px !important; text-align: right;">Ikuti Kami</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0;">
+                            <a target="_blank" href="https://itunes.apple.com/us/app/tokopedia/id1001394201?ls=1&mt=8" style="color: #03ac0e; font-weight: 800; text-decoration: none;">
+                                <img src="https://ecs7.tokopedia.net/fintech/badge-apple.png" alt="App Store" width="120" style="margin-right: 8px;">
+                            </a>
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.tokopedia.tkpd&hl=en" style="color: #03ac0e; font-weight: 800; text-decoration: none;">
+                                <img src="https://ecs7.tokopedia.net/fintech/badge-google.png" alt="Play Store" width="120" style="margin-right: 8px;">
+                            </a>
+                        </td>
+                        <td style="padding: 0; text-align: right;">
+                            <a target="_blank" href="https://www.facebook.com/tokopedia/" style="color: #03ac0e; font-weight: 800; text-decoration: none;">
+                                <img src="https://ecs7.tokopedia.net/fintech/icon-facebook.png" alt="Logo Facebook" width="32">
+                            </a>
+                            <a target="_blank" href="https://www.instagram.com/tokopedia/" style="color: #03ac0e; font-weight: 800; text-decoration: none;">
+                                <img src="https://ecs7.tokopedia.net/fintech/icon-instagram.png" alt="Logo Instagram" width="32">
+                            </a>
+                            <a target="_blank" href="https://twitter.com/tokopedia/" style="color: #03ac0e; font-weight: 800; text-decoration: none;">
+                                <img src="https://ecs7.tokopedia.net/fintech/icon-twitter.png" alt="Logo Twitter" width="32">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="border-top: 1px solid #e7e7e7; padding: 16px 32px; text-align: center;">
+                <p style="font-size: 12px; margin: 0;">2009-2020, PT Tokopedia</p>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

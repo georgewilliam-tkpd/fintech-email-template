@@ -88,6 +88,19 @@
   }
 }
 
+.background {
+  &-center {
+    background-position: center;
+  }
+  &-contain {
+    background-size: contain;
+  }
+  &-no-repeat {
+    background-repeat: no-repeat;
+  }
+
+}
+
 .bold {
   font-weight: bold;
 }
@@ -105,12 +118,22 @@
   border: 1px solid $N100;
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+
+  &.justify-between {
+    justify-content: space-between;
+  }
+}
+
 .full-width {
+  box-sizing: border-box;
   width: 100%;
 }
 
 .large {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .m-auto {

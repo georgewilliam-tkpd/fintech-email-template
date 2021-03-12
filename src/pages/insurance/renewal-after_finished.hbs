@@ -1,0 +1,134 @@
+---
+title: Asuransi Tokopedia
+userName: "{{.UserName}}"
+introTitle: "Habis beli gadget baru, tapi takut rusak? Perpanjang proteksinya hingga {{.Duration}} lagi!"
+protectionSummary: 
+- label: Biaya Perpanjangan Proteksi
+  value: {{.ProtectionAmount}}
+- label: Durasi Perpanjangan Proteksi
+  value: +{{.Duration}}
+- label: Proteksi Diperpanjang Hingga
+  value: <span class="color-g500">{{.ProtectionDate}}</span>
+protectionBenefit: 
+- icon: https://ecs7.tokopedia.net/fintech/insurance/icon-breakage.png
+  text: Kerusakan akibat terjatuh atau kejadian yang tidak disengaja
+- icon: https://ecs7.tokopedia.net/fintech/insurance/icon-teardrop.png
+  text: Kerusakan akibat terkena atau kemasukan cairan
+- icon: https://ecs7.tokopedia.net/fintech/insurance/icon-mask.png
+  text: Kehilangan akibat tindak kriminal seperti dicuri atau kerampokan
+- icon: https://ecs7.tokopedia.net/fintech/insurance/icon-flame.png
+  text: Kerusakan akibat Kebakaran, sambaran petir, dan ledakan
+---
+<table class="body">
+  {{> intro}}
+  <tr>
+    <td class="section pt0">  
+      <p>
+        Proteksi Gadget akan lindungi gadget-mu hingga 12 bulan kedepan. 
+        Untuk mencegah hal-hal tak terduga, kamu bisa tambah masa perlindungan hingga \{{.Duration}} lagi. 
+        Cek penawarannya di bawah.</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="section">  
+      <table>
+        <tr>
+          <td>
+            <img src="\{{.ImageUrl}}" width="40px" height="40px" class="mr3" />
+          </td>
+          <td>
+            <p class="color-g500"><b>\{{.Invoice}}</b></p>
+            <p>\{{.ProductName}}</p>
+            <p><b>\{{.ProductAmount}}</b></p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="section">
+      <h2>Ringkasan perpanjangan proteksi</h2>
+      <table class="gray-box full-width">
+        {{#each protectionSummary}}
+          <tr>
+            <td><small>{{this.label}}</small></td>
+            <td><b>{{{this.value}}}</b></td>
+          </tr>
+        {{/each}}
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="section">
+      <table width="100%">
+        <tr>
+          <td width="25%"></td>
+          <td class="valign-center align-right" width="25%">
+            Perlindungan oleh:
+          </td>
+          <td class="valign-center align-left" width="25%">
+            <img src="https://ecs7.tokopedia.net/fintech/insurance/logo-adira.png" height="16">
+          </td>
+          <td width="25%"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="section">
+      <a class="btn block main">Perpanjang Proteksi Sekarang</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="section">
+      <h2>Manfaat perlindungan</h2>
+       <table>
+        {{#each protectionBenefit}}
+          <tr>
+            <td><img src={{this.icon}} width="36px" class="mr4 my3"/></td>
+            <td>{{this.text}}</td>
+          </tr>
+        {{/each}}
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="section">
+      <h2>Kontak mitra asuransi</h2>
+      <p>Jika memiliki pertanyaan atau memerlukan bantuan, silakan menghubungi:</p>
+       <table style="border:1px solid #e5e7e9;border-radius:8px" class="mt4" width="100%">
+        <tr>
+          <td width="65%" class="py6 pl6">
+            <img src="https://ecs7.tokopedia.net/fintech/insurance/assets/logo-fuse.png"/>
+            <p class="mt4"><b>PT Fuse Teknologi Indonesia</b></p>
+            <p>
+              Jl. Meruya Ilir Raya, Ruko Rich Palace,<br/>
+              Blok A6, Srengseng, Kembangan,<br/>
+              Jakarta Barat 11630
+            </p>
+            <p class="mt4"><b>E-mail</b></p>
+            <p>
+              csmicro@fuse.co.id<br/>
+              Dengan subject:Klaim (nama produk asuransi)-<br/>
+              (nomor polis asuransi)
+            </p>
+          </td>
+          <td  width="35%" class="align-right py6 pr6">
+            <p class="mt4"><b>Telepon</b></p>
+            <p>
+              021 5020 0879
+            </p>
+            <p class="mt4"><b>WhatsApp</b></p>
+            <p>0821 2496 7500</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  {{> footer}}
+</table>

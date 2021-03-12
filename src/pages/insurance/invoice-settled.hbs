@@ -1,0 +1,88 @@
+---
+invoiceRows: 
+- - label: Nomor Invoice 
+    value: INV/20181011/XVI/X/55069657
+  - label: Tanggal Transaksi
+    value: 28 Oktober 2020, 18:40 WIB
+- - label: Pembeli
+    value: Ivan Bagus Pinuntun
+  - label: Metode Pembayaran
+    value: BRI Virtual Account
+- - label: Jenis Transaksi
+    value: Pembelian Asuransi
+transactionDetails: 
+- label: Jenis Asuransi
+  value: Proteksi Gadget
+- label: Masa Perlindungan
+  value: 12 Bulan
+- label: Jumlah Asuransi
+  value: 2 Barang
+- label: Harga Asuransi
+  value: Rp30.000/barang
+---
+
+<div class="body w800">
+  <table class="full-width background-contain background-no-repeat background-center" style="background-image: url(https://images.tokopedia.net/img/insurance/background-settled.png);background-size:70%">
+    <tr>
+      <td class="section">
+        <div class="flex justify-between">
+          <img height="28px" src=" https://images.tokopedia.net/img/insurance/logo-tokopedia.png"/>
+          <a>
+            <div class="flex">
+            <p>Cetak Invoice</p>
+            <img 
+              class="ml2" 
+              height="16px" 
+              src="https://images.tokopedia.net/img/insurance/icon-print.png"/>
+            </div>
+          </a>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="section">
+        <h1>Invoice</h1>
+        <table class="full-width">
+          {{#each invoiceRows as | invoiceRow|}}
+            <tr>
+              {{#each invoiceRow}}
+                <td class="py1"><b>{{this.label}}</b></td>
+                <td class="py1">{{this.value}}</td>
+              {{/each}}
+            </tr>
+          {{/each}}
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="section">
+        <h1>Detail Transaksi</h1>
+        <div class="full-width bordered background-color-n50 p4" style="border-radius: 8px 8px 0 0;">
+            <p>INV/20181011/XVI/X/55069657</p>
+            <p><b>iPhone 11 Pro 256 GB - Garansi Resmi iBox</b></p>
+        </div>
+        <div class="full-width bordered p4" style="border-radius: 0 0 8px 8px; border-top: 0">
+          <table class="full-width">
+            <tr>
+              {{#each transactionDetails}}
+                <td>
+                  <p>{{this.label}}</p>
+                  <p><b>{{this.value}}</b></p>
+                </td>
+              {{/each}}
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="section pb8" align="right">
+        <div class="flex justify-between rounded-corner bordered p4 background-color-n50" style="width: 400px">
+          <p class="large"><b>Total Bayar</b></p>
+          <p class="color-g500 large"><b>Rp60.000</b></p>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div></div>
+</div>

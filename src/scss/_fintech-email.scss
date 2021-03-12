@@ -79,32 +79,23 @@ img.logo {
   width: 144px;
 }
 
-table.body {
+.body {
   width: 600px;
   margin: 40px auto 24px;
   background-color: $N0;
   border: 1px solid $N100;
   border-spacing: 0;
   
+  &.w800 {
+    width: 800px;
+  }
+
   td.section {
-    padding: 16px 32px;
+    padding: 16px 20px;
   }
 
   ol,ul {
     padding-left: 20px;
-  }
-}
-
-.rounded-corner {
-  border-radius: 12px;
-}
-
-.gray-box {
-  padding: 16px;
-  border-radius: 12px;
-  background-color: $N50;
-  td {
-    padding: 8px;
   }
 }
 
@@ -129,3 +120,17 @@ table.body {
     }
   }
 }
+
+.gray-box {
+  padding: 16px;
+  border-radius: 12px;
+  background-color: $N50;
+  td {
+    padding: 8px;
+  }
+}
+
+.rounded-corner {
+  border-radius: 12px;
+}
+

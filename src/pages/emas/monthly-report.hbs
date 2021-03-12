@@ -6,8 +6,6 @@ introText: >
  Berikut ringkasan investasi emasmu untuk periode <b>{{ .data.ReportDate }}</b>.
  Kamu bisa pantau detail investasimu dengan mengunduh laporan di bawah ini.
 goldHistory: 
-- month: "{{(index .data.MonthlyDetail 3).Month }}"
-  weight: "{{(index .data.MonthlyDetail 3).Weight }}"
 - month: "{{(index .data.MonthlyDetail 2).Month }}"
   weight: "{{(index .data.MonthlyDetail 2).Weight }}"
 - month: "{{(index .data.MonthlyDetail 1).Month }}"
@@ -72,7 +70,6 @@ goldHistory:
   "push_notification_images": [],
   "notification_types": []
 }
-
 -->
 <table class="body">
   {{> intro }}
@@ -99,7 +96,7 @@ goldHistory:
           </td>
         </tr>
       </table>
-      <div class="ticker mt4" width="100%">
+      <div class="ticker info mt4" width="100%">
         * Nilai emas berdasarkan harga jual per <strong> \{{ .data.SellPriceTime }} </strong> sebesar <strong>\{{ .data.SellPrice }}/gr</strong>.
       </div>
     </td>
@@ -128,7 +125,7 @@ goldHistory:
     <td class="section">
       <p>Pantau terus Tokopedia Emas dan nikmati untungnya berinvestasi untuk masa depanmu!</p>
       <a href="https://www.tokopedia.com/emas/?utm_source=lPVaQi6N&utm_medium=jNayrQwO&utm_campaign=CO_TX-FTC-EGOLDACTIVATION-MAINCTA&utm_content=MAINCTA" class="btn main block mt4" href="https://www.tokopedia.com/emas/">
-        Ke Tokopedia Emas
+        Tambah Tabungan Emas
       </a>
     </td>
   </tr>

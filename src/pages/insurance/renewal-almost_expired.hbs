@@ -1,14 +1,14 @@
 ---
 title: Asuransi Tokopedia
-userName: "{{.name}}"
-introTitle: "Habis beli gadget baru, tapi takut rusak? Perpanjang proteksinya hingga 6 bulan lagi!"
+userName: "{{.UserName}}"
+introTitle: "Gadget kesayanganmu sudah mau 1 tahun pemakaiannya, saatnya perpanjang proteksinya!"
 protectionSummary: 
 - label: Biaya Perpanjangan Proteksi
-  value: Rp40.000
+  value: {{.ProtectionAmount}}
 - label: Durasi Perpanjangan Proteksi
-  value: +6 Bulan
+  value: +{{.Duration}}
 - label: Proteksi Diperpanjang Hingga
-  value: <span class="color-g500">20 Nov 2020</span>
+  value: <span class="color-g500">{{.ProtectionDate}}</span>
 protectionBenefit: 
 - icon: https://ecs7.tokopedia.net/fintech/insurance/icon-breakage.png
   text: Kerusakan akibat terjatuh atau kejadian yang tidak disengaja
@@ -23,7 +23,10 @@ protectionBenefit:
   {{> intro}}
   <tr>
     <td class="section pt0">  
-      <p>Proteksi Gadget akan lindungi gadget-mu hingga 12 bulan ke depan. Untuk mencegah hal-hal tak terduga, kamu bisa tambah masa perlindungan hingga 6 bulan lagi. Cek penawarannya di bawah.</p>
+      <p>
+        Untuk mencegah hal-hal tak terduga, 
+        sekarang saat yang tepat untuk perpanjang masa perlindungan gadget-mu hingga \{{ .Duration }} lagi. 
+        Cek penawarannya di bawah.
     </td>
   </tr>
 
@@ -32,12 +35,12 @@ protectionBenefit:
       <table>
         <tr>
           <td>
-            <img src="https://via.placeholder.com/500" width="40px" height="40px" class="mr3" />
+            <img src="\{{.ImageUrl}}" width="40px" height="40px" class="mr3" />
           </td>
           <td>
-            <p class="color-g500"><b>INV/20191211/XVI/X/85674123</b></p>
-            <p>Apple iPhone 11 Max Pro 256 GB BNIB</p>
-            <p><b>Apple iPhone 11 Max Pro 256 GB BNIB</b></p>
+            <p class="color-g500"><b>\{{.Invoice}}</b></p>
+            <p>\{{.ProductName}}</p>
+            <p><b>\{{.ProductAmount}}</b></p>
           </td>
         </tr>
       </table>

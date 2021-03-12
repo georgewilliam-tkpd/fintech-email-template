@@ -8,6 +8,19 @@ introText: >
   Pastikan alamat pengiriman sudah benar & bayar tagihan terakhir tepat waktu. 
   Emas akan dikirim setelah tagihan lunas.
 iconWidth: 360px
+applicationSummary: 
+- label: ID Pengajuan
+  value: <span class="green">CC4512001</span>
+- label: Jumlah Emas
+  value: 2 gram
+- label: Jenis Kepingan
+  value: Antam
+- label: Durasi Cicilan
+  value: 6 Bulan
+- label: Total Tagihan
+  value: Rp1.200.000
+- label: Tagihan Per Bulan (6x)
+  value: Rp200.000
 ---
 
 <table class="body">
@@ -35,5 +48,6 @@ iconWidth: 360px
       <a class="btn main">Ke Dashboard Cicilan Emas</a>
     </td>
   </tr> 
+  {{> gold-installment-details }}
   {{> footer type="investment-gold"}}
 </table>
