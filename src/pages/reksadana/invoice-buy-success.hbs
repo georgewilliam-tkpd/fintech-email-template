@@ -1,0 +1,161 @@
+---
+invoiceRows: 
+- label: Pembeli
+  value: Riki Setiawan
+- label: Email
+  value: riki.setia@gmail.com
+- label: Nomor HP
+  value: 081234567890
+- label: Tanggal Transaksi
+  value: 28 Februari 2021, 18:40 WIB
+transactionDetails: 
+- - value: Syailendra Dana Kas
+    subValue: Pasar Uang
+  - value: 98.669,86
+  - value: Rp1.330,14
+  - value: 28 Feb 2021
+  - value: Rp100.000
+promoCode: CASHBACKPASTI
+promoValue: Rp10.000 OVO Points
+promoAdditionalValue: Rp10.000 (1.000 TokoPoints)
+paymentMethod: BRI Virtual Account (BRIVA)
+paymentMethodValue: (**** **** **** 4201)
+lastUpdatedDate: 28 Feb 2021; 15:30 WIB
+---
+
+
+<div class="body w800">
+  <table class="full-width">
+    <tr>
+      <td>
+        <table class="full-width">
+          <tr>
+            <td class="section">
+              <a target="_blank" href="https://www.tokopedia.com/">
+                <img
+                  class="logo"
+                  alt="Logo Tokopedia"
+                  src="https://ecs7.tokopedia.net/assets-fintech-email/img/logo/logo-tokopedia.png"
+                />
+              </a>
+            </td>
+            <td class="align-right section">
+              <h1 class="m0" style="letter-spacing: 2px;">INVOICE</h1>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="section">
+        <table>
+          <tr>
+            <td>No. Invoice</td>
+            <td class="px4 py1">:</td>
+            <td><b>INV/20181011/XVI/X/55069657</b> <span class="label green">Lunas</span></td>
+          </tr>
+          <tr>
+            <td>Diterbitkan atas</td>
+            <td class="px4 py1">:</td>
+            <td><img src="https://ecs7.tokopedia.net/img/wallet/email/bareksa-logo.png" alt="Bareksa Logo" height="16" /></td>
+          </tr>
+          {{#each invoiceRows}}
+          <tr>
+            <td>{{this.label}}</td>
+            <td class="px4 py1">:</td>
+            <td><b>{{this.value}}</b></td>
+          </tr>
+          {{/each}}
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="section">
+        <table class="full-width invoice-table">
+          <tr class="background-color-n700 color-n0">
+            <th class="align-center px2 py3 small">INFO PRODUK</th>
+            <th class="align-center px2 py3 small">PERKIRAAN UNIT DIBELI</th>
+            <th class="align-center px2 py3 small">HARGA PER UNIT</th>
+            <th class="align-center px2 py3 small">TANGGAL HARGA BERLAKU</th>
+            <th class="align-center px2 py3 small">TOTAL HARGA</th>
+          </tr>
+          {{#each transactionDetails as | transactionRow |}}
+          <tr>
+            {{#each transactionRow}}
+              <td class="p2 {{#if this.subValue}}align-left{{else}}align-right{{/if}}">
+                {{#if this.subValue}}
+                  <b class="large">{{this.value}}</b><br />
+                  {{this.subValue}}
+                {{else}}
+                  {{this.value}}
+                {{/if}}
+              </td>
+            {{/each}}
+          </tr>
+          {{/each}}
+          <tr>
+            <td colspan="5">
+              <table class="full-width">
+                <tr>
+                  <td style="width: 50%;"></td>
+                  <td class="px2 py3">
+                    <b class="small">TOTAL TAGIHAN</b>
+                  </td>
+                  <td class="align-right px2 py3">
+                    <b class="large">Rp100.000</b>
+                  </td>
+                </tr>
+                {{#if promoCode}}
+                <tr class="promo-row">
+                  <td style="width: 50%;"></td>
+                  <td class="px2 py3">
+                    <div>
+                      <span class="label blue">Promo</span>
+                      <p class="pt1">{{promoCode}}</p>
+                    </div>
+                  </td>
+                  <td class="px2 py3" style="text-align: right">
+                    {{promoValue}}
+                    {{#if promoAdditionalValue}}<br />{{promoAdditionalValue}}{{/if}}
+                  </td>
+                </tr>
+                {{/if}}
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table class="full-width">
+          <tr>
+            <td style="width: 50%;"></td>
+            <td class="px2 pb8">
+              <div>
+                <p>Metode Pembayaran</p>
+                <p><b>{{paymentMethod}}</b></p>
+                <p><b>{{paymentMethodValue}}</b></p>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="section">
+        <table class="full-width">
+          <tr>
+            <td>
+              <p>Invoice ini sah dan diproses oleh komputer</p>
+              <p>Silakan hubungi <a href="https://www.tokopedia.com/help">Tokopedia Care</a> apabila kamu membutuhkan bantuan.</p>
+            </td>
+            <td class="align-right" style="vertical-align: bottom">
+              <i>Terakhir diupdate: {{lastUpdatedDate}}</i>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>

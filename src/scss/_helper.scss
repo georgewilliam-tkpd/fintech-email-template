@@ -1,4 +1,4 @@
-@import './color';
+@import "./color";
 
 /* Helper */
 
@@ -80,6 +80,9 @@
 
 //Various
 .align {
+  &-left {
+    text-align: left;
+  }
   &-right {
     text-align: right;
   }
@@ -98,7 +101,6 @@
   &-no-repeat {
     background-repeat: no-repeat;
   }
-
 }
 
 .bold {
@@ -157,7 +159,6 @@
     vertical-align: bottom;
   }
 }
-
 
 .w {
   &-auto {
