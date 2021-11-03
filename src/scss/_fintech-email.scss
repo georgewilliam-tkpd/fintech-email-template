@@ -1,5 +1,5 @@
-@import './color';
-@import './typography';
+@import "./color";
+@import "./typography";
 
 /* Semantics */
 html,
@@ -7,7 +7,7 @@ body {
   margin: 0;
   color: $N300;
   background-color: $N50;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -15,7 +15,8 @@ body {
 }
 
 /* Text Styles */
-strong, b {
+strong,
+b {
   font-weight: 800;
   color: $N500;
 }
@@ -24,7 +25,8 @@ strong, b {
   font-weight: 400;
 }
 
-small, .small  {
+small,
+.small {
   font-size: 12px;
 }
 
@@ -39,11 +41,14 @@ a {
   text-decoration: none;
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
   margin-bottom: 16px;
   font-weight: 800;
-  color: $N500;
+  color: $N700;
 }
 
 h1 {
@@ -85,7 +90,7 @@ img.logo {
   background-color: $N0;
   border: 1px solid $N100;
   border-spacing: 0;
-  
+
   &.w800 {
     width: 800px;
   }
@@ -94,7 +99,8 @@ img.logo {
     padding: 16px 20px;
   }
 
-  ol,ul {
+  ol,
+  ul {
     padding-left: 20px;
   }
 }
@@ -112,7 +118,7 @@ img.logo {
       font-weight: 400;
       color: $N300;
     }
-    >div {
+    > div {
       height: 108px;
       padding: 16px;
       border-radius: 8px;
@@ -133,4 +139,3 @@ img.logo {
 .rounded-corner {
   border-radius: 12px;
 }
-

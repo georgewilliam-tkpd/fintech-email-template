@@ -1,0 +1,64 @@
+---
+userName: Ivan Pambudi
+sectionList:
+- title: 'Bunga berbunga itu apa, sih?'
+  content: 'Semakin banyak investasi, akan semakin banyak juga potensi hasil yang kamu dapat. Investasi rutin yang kamu lakukan akan menghasilkan bunga berbunga. Artinya bunga dari investasi kamu juga akan berbunga, dan hasilnya akan berbunga lagi sehingga pertumbuhannya terakumulasi terus seperti efek bola salju!'
+  image: https://images.tokopedia.net/img/fintech/mutualfund/img-compound-interest.png
+  imageAlt: 'compound-interest'
+- title: 'Gimana caranya biar investasi untung?'
+  content: 'Artinya, kunci keuntungan berlipat ganda itu bukan cuma investasi banyak, tapi juga investasi yang konsisten!'
+  image: https://images.tokopedia.net/img/fintech/mutualfund/img-consistency.png
+  imageAlt: 'consistency'
+- title: 'Gimana caranya biar bisa investasi konsisten?'
+  content: 'Untungnya, di Tokopedia Reksa Dana, kamu bisa atur pembelian reksa dana otomatis dari OVO Cash sesuai jadwal yang kamu atur sendiri. Sehingga dapat konsisten menabung hingga akhirnya bisa mendapatkan untung lebih banyak!'
+  image: https://images.tokopedia.net/img/fintech/mutualfund/img-subscribe-ovocash.png
+  imageAlt: 'subscribe-ovocash'
+---
+
+<html style="background-color: #fff;">
+  <body style="background-color: #fff;">
+    <table border="0" cellpadding="0" cellspacing="0" class="ft-body__container my4" align="center" style="width: 600px;">
+      {{> header type="reksadana"}}
+
+      <tr>
+        <td class="pt8">Halo <b>{{userName}},</b></td>
+      </tr>
+      <tr>
+        <td class="pb8">
+          <h1 class="mt4">Ini pentingnya nabung rutin untuk investasi jangka panjang!</h1>
+          <p>Ngomongin investasi reksa dana, wajib kenal dengan <b>compound interest</b> atau bunga berbunga. Apakah itu?</p>
+        </td>
+      </tr>
+      {{#each sectionList}}
+        <tr>
+          <td>
+            <div style="text-align: center;">
+              <img src={{this.image}} alt={{this.imageAlt}} style="width: 560px;">
+            </div>
+            <h3 style="font-size: 20px;">{{this.title}}</h3>
+            <p>{{this.content}}</p>
+            <hr class="mt8" style="border-style: dashed;" />
+          </td>
+        </tr>
+      {{/each}}
+      <tr>
+        <td class="py8">
+          <p>Kamu bisa mulai investasi sedini mungkin dengan menabung rutin. Di Tokopedia Reksa Dana, kamu bisa mulai nabung reksa dana rutin mulai dari Rp10 ribu! Kamu bisa atur pembelian reksa dana otomatis dari OVO Cash sesuai jadwal kamu sendiri.</p>
+          <br />
+          <p>Jangan tunda-tunda lagi ya, yuk nabung rutin reksa dana dari sekarang! #MulaiAjaDulu</p>
+          <a href="https://www.tokopedia.com/reksa-dana/langganan" class="btn main block mt4">Nabung Rutin Sekarang</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="pb4">
+          <div style="position: relative; text-align:center;">
+            <hr style="border-style: dashed; position: absolute; top: 2px; width: 100%;">
+            <span style="background-color: white; font-size: 12px; padding: 0 8px; position: relative;">Powered by: <img src="https://images.tokopedia.net/img/fintech/mutualfund/logo-bareksa.png" alt="bareksa" style="height: 16px; margin-left: 4px; margin-bottom: -2px;"></span>
+          </div>
+        </td>
+      </tr>
+
+      {{> footer type="mutualfund"}}
+    </table>
+  </body>
+</html>

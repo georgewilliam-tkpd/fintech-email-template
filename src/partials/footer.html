@@ -1,5 +1,6 @@
 <tr>
   <td class="section pt0">
+    {{#ifequal type 'default'}}
     <table class="footer mt6">
       <tr>
         <td class="product">
@@ -7,31 +8,37 @@
             <a href="https://www.tokopedia.com/reksa-dana/" target="_blank">
               <img
                 src="https://ecs7.tokopedia.net/assets-fintech-email/img/icon/icon-reksadana_tokopedia.png"
-                alt="Icon Tokopedia Reksadana" width="32" />
+                alt="Icon Tokopedia Reksadana"
+                width="32"
+              />
               <h4>Reksa Dana</h4>
               <small>Nabung dengan keuntungan hingga 6,5% per tahun</small>
             </a>
-            </div>
+          </div>
         </td>
         <td width="16px"></td>
         <td class="product">
           <div>
-              <a href="https://www.tokopedia.com/emas/" target="_blank">
-                <img
-                  src="https://ecs7.tokopedia.net/assets-egold-frontend/icon-gold-stack.png"
-                  alt="Icon Tokopedia Emas" width="32" />
-                <h4>Emas</h4>
-                <small>Bisa nabung emas mulai dari Rp5.000</small>
-              </a>
-            </div>
+            <a href="https://www.tokopedia.com/emas/" target="_blank">
+              <img
+                src="https://ecs7.tokopedia.net/assets-egold-frontend/icon-gold-stack.png"
+                alt="Icon Tokopedia Emas"
+                width="32"
+              />
+              <h4>Emas</h4>
+              <small>Bisa nabung emas mulai dari Rp5.000</small>
+            </a>
+          </div>
         </td>
-        <td width="16px"></td> 
+        <td width="16px"></td>
         <td class="product">
           <div>
             <a href="https://www.tokopedia.com/asuransi/" target="_blank">
               <img
                 src="https://ecs7.tokopedia.net/assets-fintech-email/img/icon/icon-insurance_tokopedia.png"
-                alt="Icon Tokopedia Asuransi" width="32" />
+                alt="Icon Tokopedia Asuransi"
+                width="32"
+              />
               <h4>Asuransi</h4>
               <small>Temukan asuransi sesuai dengan kebutuhanmu</small>
             </a>
@@ -40,16 +47,71 @@
       </tr>
     </table>
 
-    <p class="pt4"><small>
-      E-mail ini dibuat otomatis, mohon tidak membalas. Jika butuh bantuan, silakan <a href="https://tokopedia.com/help">hubungi Tokopedia Care.</a>
-    </small>
+    {{/ifequal}} {{#ifequal type 'mutualfund'}}
+    <table class="footer mt6">
+      <tr>
+        <td class="product">
+          <div>
+            <a href="https://www.tokopedia.com/kartu-kredit/" target="_blank">
+              <img
+                src="https://ecs7.tokopedia.net/assets-fintech-email/img/icon/icon-kartu-kredit_tokopedia.png"
+                alt="Icon Tokopedia Kartu Kredit"
+                width="32"
+              />
+              <h4>Kartu Kredit</h4>
+              <small>Ajukan kartu kredit dari bank pilihanmu</small>
+            </a>
+          </div>
+        </td>
+        <td width="16px"></td>
+        <td class="product">
+          <div>
+            <a
+              href="https://www.tokopedia.com/asuransi/proteksi"
+              target="_blank"
+            >
+              <img
+                src="https://ecs7.tokopedia.net/fintech/insurance/assets/icon-product.png"
+                alt="Icon Proteksi Produk"
+                width="20"
+                height="20"
+                style="margin-top: 4px"
+              />
+              <h4 style="margin-top: 8px">Proteksi Produk</h4>
+              <small>Perlindungan di luar cakupan garansi resmi</small>
+            </a>
+          </div>
+        </td>
+        <td width="16px"></td>
+        <td class="product">
+          <div>
+            <a href="https://www.tokopedia.com/emas/" target="_blank">
+              <img
+                src="https://ecs7.tokopedia.net/assets-egold-frontend/icon-gold-stack.png"
+                alt="Icon Tokopedia Emas"
+                width="32"
+              />
+              <h4>Emas</h4>
+              <small>Bisa nabung emas mulai dari Rp5.000</small>
+            </a>
+          </div>
+        </td>
+      </tr>
+    </table>
+    {{/ifequal}}
+
+    <p class="pt4 pb8">
+      <small>
+        E-mail ini dibuat otomatis, mohon tidak membalas. Jika butuh bantuan,
+        silakan <a href="https://tokopedia.com/help">hubungi Tokopedia Care.</a>
+      </small>
     </p>
   </td>
 </tr>
 
 <tr>
-  <td class="section">
-    <table width=100%>
+  <td class="section pb4">
+    <table width="100%">
       <tr>
         <td width="60%" class="pb2">
           <small>Download Aplikasi Tokopedia</small>
@@ -60,28 +122,51 @@
       </tr>
       <tr>
         <td>
-          <a target="_blank" href="https://itunes.apple.com/us/app/tokopedia/id1001394201?ls=1&mt=8">
-            <img src="https://ecs7.tokopedia.net/fintech/badge-apple.png"
-              alt="App Store" width="135" class="mr2" />
+          <a
+            target="_blank"
+            href="https://itunes.apple.com/us/app/tokopedia/id1001394201?ls=1&mt=8"
+          >
+            <img
+              src="https://ecs7.tokopedia.net/fintech/badge-apple.png"
+              alt="App Store"
+              width="135"
+              class="mr2"
+            />
           </a>
-          <a target="_blank" href="https://play.google.com/store/apps/details?id=com.tokopedia.tkpd&hl=en">
-            <img src="https://ecs7.tokopedia.net/fintech/badge-google.png"
-              alt="Play Store" width="135" class="mr2" />
+          <a
+            target="_blank"
+            href="https://play.google.com/store/apps/details?id=com.tokopedia.tkpd&hl=en"
+          >
+            <img
+              src="https://ecs7.tokopedia.net/fintech/badge-google.png"
+              alt="Play Store"
+              width="135"
+              class="mr2"
+            />
           </a>
         </td>
 
         <td class="align-right">
           <a target="_blank" href="https://www.facebook.com/tokopedia/">
-            <img src="https://ecs7.tokopedia.net/fintech/icon-facebook.png"
-              alt="Logo Facebook" width="32" />
+            <img
+              src="https://ecs7.tokopedia.net/fintech/icon-facebook.png"
+              alt="Logo Facebook"
+              width="32"
+            />
           </a>
           <a target="_blank" href="https://twitter.com/tokopedia/">
-            <img src="https://ecs7.tokopedia.net/fintech/icon-twitter.png"
-              alt="Logo Twitter" width="32" />
+            <img
+              src="https://ecs7.tokopedia.net/fintech/icon-twitter.png"
+              alt="Logo Twitter"
+              width="32"
+            />
           </a>
           <a target="_blank" href="https://www.instagram.com/tokopedia/">
-            <img src="https://ecs7.tokopedia.net/fintech/icon-instagram.png"
-              alt="Logo Instagram" width="32" />
+            <img
+              src="https://ecs7.tokopedia.net/fintech/icon-instagram.png"
+              alt="Logo Instagram"
+              width="32"
+            />
           </a>
         </td>
       </tr>
@@ -90,7 +175,7 @@
 </tr>
 
 <tr>
-  <td class="section align-center" style="border-top:1px solid #e7e7e7">
+  <td class="section align-center pt4" style="border-top: 1px solid #e7e7e7">
     <p class="small color-n150">2009-2021, PT Tokopedia</p>
   </td>
 </tr>
