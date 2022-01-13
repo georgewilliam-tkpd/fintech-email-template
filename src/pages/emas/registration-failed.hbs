@@ -1,0 +1,43 @@
+---
+title: Tokopedia Emas - Pembelian Berhasil
+userName: "{{.name}}"
+introTitle: Pendaftaran Tabungan Emas belum berhasil
+introText: Di antara data di bawah yang kamu ajukan sebelumnya ada yang kurang sesuai, nih. Bisa ajukan lagi, kok. Pastikan kali ini data kamu dengan benar, ya.
+registrationSummary: 
+- label: Nama Lengkap
+  value: "{{.name}}"
+- label: Tanggal Lahir
+  value: "{{.date_of_birth}}"
+- label: Nama Ibu Kandung
+  value: "{{.mother_maiden_name}}"
+ctaLink: https://tokopedia.com/emas
+footerCTA:
+- type: 'credit-card'
+- type: 'mutualfund'
+- type: 'gold'
+---
+
+<table class="body" align="center">
+  {{> intro}}
+  <tr>
+    <td class="section">
+       <div class="gray-box">
+        <table class="full-width">
+          {{#each registrationSummary}}
+            <tr>
+              <td width="200px" class="align-left">{{this.label}}</td>
+              <td class="align-right"><strong>{{{this.value}}}</strong></td>
+            </tr>
+          {{/each}}
+        </table>
+      </div>
+      <a href="{{ctaLink}}" class="btn block main mt4">Betulkan Data</a>
+      <div class="mt8" style="position: relative; text-align:center;">
+        <hr style="border-style: dashed; position: absolute; top: 2px; width: 100%;">
+        <span style="background-color: white; font-size: 12px; padding: 0 8px; position: relative;">Powered by: <img src="https://images.tokopedia.net/img/fintech/gold/logo-pegadaian-with-caption.png" alt="pegadaian" style="height: 16px; margin-left: 4px; margin-bottom: -2px;"></span>
+      </div>
+    </td>
+  </tr>
+
+  {{> footer-adaptive }}
+</table>
