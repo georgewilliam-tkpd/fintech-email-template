@@ -1,0 +1,626 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  lang="en"
+  xml:lang="en"
+  style="
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.7);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+  "
+>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Klaim di proses | Tokopedia</title>
+  </head>
+
+  <body
+    style="
+      background-color: #f8f8f8;
+      box-sizing: border-box;
+      color: rgba(0, 0, 0, 0.7);
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      margin: 0;
+    "
+  >
+    <table
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      align="center"
+      style="
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        border-spacing: 0;
+        margin: 40px auto 24px;
+        width: 640px;
+      "
+    >
+      <tr>
+        <td style="padding: 24px">
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            style="border-spacing: 0"
+          >
+            <tr>
+              <td>
+                <a
+                  target="_blank"
+                  href="https://www.tokopedia.com/asuransi/"
+                  style="text-decoration: none"
+                  ><img
+                    src="https://ecs7.tokopedia.net/assets-fintech-email/img/logo/logo-tokopedia.png"
+                    alt="Logo Tokopedia"
+                    style="width: 144px"
+                /></a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td
+          style="
+            max-width: 600px !important;
+            padding-bottom: 16px;
+            padding-left: 24px;
+            padding-right: 24px;
+          "
+        >
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="border-spacing: 0"
+          >
+            <tr>
+              <td>
+                <p style="color: rgba(0, 0, 0, 0.7); font-size: 16px">
+                  Halo, <b>{{ .name }}</b>
+                </p>
+                <p
+                  style="
+                    color: rgba(0, 0, 0, 0.7);
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin: 8px 0 0 0;
+                  "
+                >
+                  <b style="color: rgba(0, 0, 0, 0.7); font-weight: 700"
+                    >Pengajuan klaim {{ .claim.product_name }} kamu sedang
+                    diproses.</b
+                  >
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td
+          style="padding-bottom: 16px; padding-left: 24px; padding-right: 24px"
+        >
+          Klaim yang kamu ajukan telah diteruskan ke {{ .partner.name }} selaku
+          mitra Tokopedia untuk {{ .claim.product_name }}. Hasil klaim akan
+          diberitahukan <b>paling lama 5 hari kerja</b> setelah pengajuan.
+        </td>
+      </tr>
+      <tr>
+        <td
+          style="
+            padding-bottom: 16px;
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-top: 16px;
+          "
+        >
+          <p style="font-size: 20px; line-height: 1.5; margin: 0 0 16px">
+            <b style="color: rgba(0, 0, 0, 0.7); font-weight: 700"
+              >Ringkasan Pengajuan Klaim</b
+            >
+          </p>
+          <table
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="
+              background-color: #f3f4f5;
+              border-radius: 8px;
+              border-spacing: 0;
+              min-width: 100%;
+              padding: 16px;
+              width: 100%;
+            "
+          >
+            {{ range $val := .claim.insureds }}
+            <tr>
+              <td
+                width="40%"
+                align="left"
+                style="padding: 10px 0; vertical-align: top"
+              >
+                <p style="line-height: 1.5; margin: 0">Nama</p>
+              </td>
+              <td
+                width="60%"
+                align="right"
+                style="padding: 10px 0; vertical-align: top"
+              >
+                <p style="line-height: 1.5; margin: 0">
+                  <b>{{ $val.name }}</b>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="40%"
+                align="left"
+                style="padding: 10px 0; vertical-align: top"
+              >
+                <p style="line-height: 1.5; margin: 0">Polis ID</p>
+              </td>
+              <td
+                width="60%"
+                align="right"
+                style="padding: 10px 0; vertical-align: top"
+              >
+                <p style="line-height: 1.5; margin: 0">
+                  <b>{{ $val.policy_number }}</b>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="40%"
+                align="left"
+                style="padding: 10px 0; vertical-align: top"
+              >
+                <p style="line-height: 1.5; margin: 0">ID Pengajuan Klaim</p>
+              </td>
+              <td
+                width="60%"
+                align="right"
+                style="padding: 10px 0; vertical-align: top"
+              >
+                <p style="line-height: 1.5; margin: 0">
+                  <b>{{ $val.claim_id }}</b>
+                </p>
+              </td>
+            </tr>
+            {{ end }} {{ range $val := .claim.notifier_summary }}
+            <tr>
+              <td
+                width="40%"
+                align="left"
+                style="padding: 10px 0; vertical-align: top"
+              >
+                <p style="line-height: 1.5; margin: 0">{{ $val.name }}:</p>
+              </td>
+              <td
+                width="60%"
+                align="right"
+                style="padding: 10px 0; vertical-align: top"
+              >
+                <p style="line-height: 1.5; margin: 0">
+                  <b style="color: rgba(0, 0, 0, 0.7); font-weight: 700"
+                    >{{ $val.value }}</b
+                  >
+                </p>
+              </td>
+            </tr>
+            {{ end }}
+            <tr>
+              <td
+                width="40%"
+                align="left"
+                style="padding: 10px 0; vertical-align: top"
+              >
+                <p style="line-height: 1.5; margin: 0">Jenis Klaim:</p>
+              </td>
+              <td
+                width="60%"
+                align="right"
+                style="padding: 10px 0; vertical-align: top"
+              >
+                <p style="line-height: 1.5; margin: 0">
+                  <b style="color: rgba(0, 0, 0, 0.7); font-weight: 700"
+                    >{{ .claim.benefit_name }}</b
+                  >
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td
+          align="center"
+          style="
+            padding-bottom: 16px;
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-top: 16px;
+          "
+        >
+          <a
+            href="https://www.tokopedia.com/asuransi/klaim/riwayat/"
+            style="
+              background-color: #fff;
+              border-radius: 8px;
+              border: 1px solid #03ac0e;
+              box-sizing: border-box;
+              color: #03ac0e;
+              display: inline-block;
+              font-size: 14px;
+              font-weight: 700;
+              height: 40px;
+              line-height: 40px;
+              padding: 0 24px;
+              text-align: center;
+              text-decoration: none;
+              width: 100%;
+            "
+            >Lihat Status Klaim</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td
+          style="
+            padding-bottom: 16px;
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-top: 16px;
+          "
+        >
+          {{ .partner.notifier_contact_info | unescape }}
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-left: 24px; padding-right: 24px">
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            align="center"
+            style="border-spacing: 0; min-width: 100%; width: 100%"
+          >
+            <tr>
+              <td style="padding: 0; width: 180px">
+                <div
+                  style="
+                    border: 1px solid #dbdee2;
+                    border-radius: 8px;
+                    height: 108px;
+                    padding: 16px;
+                  "
+                >
+                  <a
+                    href="https://www.tokopedia.com/asuransi/proteksi"
+                    target="_blank"
+                    style="
+                      color: #03ac0e;
+                      font-weight: 800;
+                      text-decoration: none;
+                    "
+                  >
+                    <img
+                      src="https://images.tokopedia.net/img/fintech/insurance/icon-product-protection.png"
+                      alt="Icon Proteksi Produk"
+                      width="32"
+                    />
+                    <h4
+                      style="
+                        color: #52565e;
+                        font-size: 14px;
+                        font-weight: 800;
+                        line-height: 20px;
+                        margin: 0;
+                        margin-top: 8px;
+                        margin-bottom: 4px;
+                      "
+                    >
+                      Proteksi Produk
+                    </h4>
+                    <small
+                      style="
+                        color: #838994;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 15px;
+                      "
+                      >Lindungi perangkat kamu dari kerusakan</small
+                    >
+                  </a>
+                </div>
+              </td>
+              <td width="16px"></td>
+              <td style="padding: 0; width: 180px">
+                <div
+                  style="
+                    border: 1px solid #dbdee2;
+                    border-radius: 8px;
+                    height: 108px;
+                    padding: 16px;
+                  "
+                >
+                  <a
+                    href="https://www.tokopedia.com/reksa-dana/"
+                    target="_blank"
+                    style="
+                      color: #03ac0e;
+                      font-weight: 800;
+                      text-decoration: none;
+                    "
+                  >
+                    <img
+                      src="https://images.tokopedia.net/img/fintech/insurance/icon-mutualfund.png"
+                      alt="Icon Tokopedia Reksa Dana"
+                      width="32"
+                    />
+                    <h4
+                      style="
+                        color: #52565e;
+                        font-size: 14px;
+                        font-weight: 800;
+                        line-height: 20px;
+                        margin: 0;
+                        margin-top: 8px;
+                        margin-bottom: 4px;
+                      "
+                    >
+                      Reksa Dana
+                    </h4>
+                    <small
+                      style="
+                        color: #838994;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 15px;
+                      "
+                      >Dengan keuntungan hingga 5% pertahun</small
+                    >
+                  </a>
+                </div>
+              </td>
+              <td width="16px"></td>
+              <td style="padding: 0; width: 180px">
+                <div
+                  style="
+                    border: 1px solid #dbdee2;
+                    border-radius: 8px;
+                    height: 108px;
+                    padding: 16px;
+                  "
+                >
+                  <a
+                    href="https://www.tokopedia.com/kartu-kredit/"
+                    target="_blank"
+                    style="
+                      color: #03ac0e;
+                      font-weight: 800;
+                      text-decoration: none;
+                    "
+                  >
+                    <img
+                      src="https://images.tokopedia.net/img/fintech/insurance/icon-travel-insurance.png"
+                      alt="Icon Tokopedia Asuransi Perjalanan"
+                      width="32"
+                    />
+                    <h4
+                      style="
+                        color: #52565e;
+                        font-size: 14px;
+                        font-weight: 800;
+                        line-height: 20px;
+                        margin: 0;
+                        margin-top: 8px;
+                        margin-bottom: 4px;
+                      "
+                    >
+                      Asuransi Perjalanan
+                    </h4>
+                    <small
+                      style="
+                        color: #838994;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 15px;
+                      "
+                      >Dapatkan kompensasi pembatalan perjalanan</small
+                    >
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <p
+            style="
+              color: rgba(0, 0, 0, 0.7);
+              font-size: 12px;
+              margin: 0 0 24px;
+              padding-top: 16px;
+            "
+          >
+            Mohon tidak membalas e-mail ini. Jika butuh bantuan, silakan
+            <a
+              target="_blank"
+              href="https://www.tokopedia.com/bantuan/"
+              style="color: #03ac0e; text-decoration: none"
+              >hubungi kami</a
+            >.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 24px">
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="border-spacing: 0; min-width: 100%; width: 100%"
+          >
+            <tr>
+              <td align="left" width="300">
+                <table
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="border-spacing: 0"
+                >
+                  <tr>
+                    <td>
+                      <p
+                        style="color: #778092; font-size: 12px; margin: 0 0 8px"
+                      >
+                        Download Aplikasi Tokopedia
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="100%"
+                        style="border-spacing: 0"
+                      >
+                        <tr>
+                          <td class="ft-nw-footer__follow-dev">
+                            <a
+                              target="_blank"
+                              href="https://itunes.apple.com/us/app/tokopedia/id1001394201?ls=1&mt=8"
+                              style="
+                                display: block;
+                                margin-right: 8px;
+                                text-decoration: none;
+                              "
+                              ><img
+                                src="https://ecs7.tokopedia.net/fintech/badge-apple.png"
+                                alt="App Store"
+                                width="135"
+                            /></a>
+                          </td>
+                          <td class="ft-nw-footer__follow-dev">
+                            <a
+                              target="_blank"
+                              href="https://play.google.com/store/apps/details?id=com.tokopedia.tkpd&hl=en"
+                              style="
+                                display: block;
+                                margin-right: 8px;
+                                text-decoration: none;
+                              "
+                              ><img
+                                src="https://ecs7.tokopedia.net/fintech/badge-google.png"
+                                alt="Play Store"
+                                width="135"
+                            /></a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td align="right" width="300">
+                <table
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="border-spacing: 0"
+                >
+                  <tr>
+                    <td align="right">
+                      <p
+                        style="color: #778092; font-size: 12px; margin: 0 0 8px"
+                      >
+                        Ikuti Kami
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <ul style="list-style: none; margin: 0; padding: 0">
+                        <li style="display: inline-block; margin: 0">
+                          <a
+                            target="_blank"
+                            href="https://www.facebook.com/tokopedia/"
+                            style="text-decoration: none"
+                            ><img
+                              src="https://ecs7.tokopedia.net/fintech/icon-facebook.png"
+                              alt="Logo Facebook"
+                              width="32"
+                          /></a>
+                        </li>
+                        <li style="display: inline-block; margin: 0">
+                          <a
+                            target="_blank"
+                            href="https://twitter.com/tokopedia/"
+                            style="text-decoration: none"
+                            ><img
+                              src="https://ecs7.tokopedia.net/fintech/icon-twitter.png"
+                              alt="Logo Twitter"
+                              width="32"
+                          /></a>
+                        </li>
+                        <li style="display: inline-block; margin: 0">
+                          <a
+                            target="_blank"
+                            href="https://www.instagram.com/tokopedia/"
+                            style="text-decoration: none"
+                            ><img
+                              src="https://ecs7.tokopedia.net/fintech/icon-instagram.png"
+                              alt="Logo Instagram"
+                              width="32"
+                          /></a>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-left: 24px; padding-right: 24px">
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="
+              border-spacing: 0;
+              border-top: 1px solid #e0e0e0;
+              color: rgba(0, 0, 0, 0.38);
+              font-size: 12px;
+              min-width: 100%;
+              text-align: center;
+              width: 100%;
+            "
+          >
+            <tr>
+              <td style="padding-bottom: 24px; padding-top: 24px">
+                &copy; 2009-2022, PT Tokopedia
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
